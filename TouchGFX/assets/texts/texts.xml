@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.25.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_2CBJ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">CONTINUE</Translation>
+      </Text>
+      <Text Id="__SingleUse_2EG8" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">END</Translation>
+      </Text>
+      <Text Id="__SingleUse_HAPL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PDA5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Your Score Is</Translation>
+      </Text>
+      <Text Id="__SingleUse_ODOB" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">NO</Translation>
+      </Text>
+      <Text Id="__SingleUse_XV5M" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">YES</Translation>
+      </Text>
+      <Text Id="__SingleUse_QNAX" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">You want end &#10;the game?</Translation>
+      </Text>
+      <Text Id="__SingleUse_S5H3" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_EUXA" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CR7K" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_I591" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1O8L" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3D3H" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4ENB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BWZB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3GGA" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_X113" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_K59M" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_NEYM" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XIHZ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CWQ8" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LU3A" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_R5B7" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_L3Y7" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">END</Translation>
+      </Text>
+      <Text Id="__SingleUse_MGH9" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P9WK" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">HIGHEST SCORE</Translation>
+      </Text>
+      <Text Id="__SingleUse_2A5I" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">X</Translation>
+      </Text>
+      <Text Id="__SingleUse_WZ19" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">GAME 2048 T1</Translation>
+      </Text>
+      <Text Id="__SingleUse_1RN6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">HIGHEST SCORE</Translation>
+      </Text>
+      <Text Id="__SingleUse_6J3A" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">PLAY</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

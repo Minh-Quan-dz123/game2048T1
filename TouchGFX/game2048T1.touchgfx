@@ -1,0 +1,711 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "homeScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_240x320_puzzle.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "highestScoreButton",
+            "X": 33,
+            "Y": 194,
+            "Width": 175,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_active.png",
+            "TextId": "__SingleUse_1RN6",
+            "ReleasedColor": {
+              "Red": 2,
+              "Green": 82,
+              "Blue": 21
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "playButton",
+            "X": 33,
+            "Y": 100,
+            "Width": 175,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_active.png",
+            "TextId": "__SingleUse_6J3A",
+            "ReleasedColor": {
+              "Red": 2,
+              "Green": 82,
+              "Blue": 21
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_active.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 45,
+            "Y": 17,
+            "Width": 151,
+            "Height": 20,
+            "TextId": "__SingleUse_WZ19",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 9,
+              "Green": 237,
+              "Blue": 222
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Container",
+            "Name": "highestScorecontainer",
+            "X": 13,
+            "Y": 85,
+            "Width": 214,
+            "Height": 150,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "image2",
+                "Y": -2,
+                "Width": 214,
+                "Height": 150,
+                "RelativeFilename": "__generated\\alternate_theme_images_containers_small_wide_outlined_light.png"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "XbuttonWithLabel1",
+                "X": 89,
+                "Y": 109,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_outline_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_outline_active.png",
+                "TextId": "__SingleUse_2A5I",
+                "ReleasedColor": {
+                  "Red": 128,
+                  "Green": 3,
+                  "Blue": 5
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_outline_active.json"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea",
+                "X": 22,
+                "Y": 5,
+                "Width": 171,
+                "Height": 20,
+                "TextId": "__SingleUse_P9WK",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "highestScoreText",
+                "X": 8,
+                "Y": 46,
+                "Width": 199,
+                "Height": 55,
+                "TextId": "__SingleUse_MGH9",
+                "TextRotation": "0",
+                "Wildcard1": {}
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "click_highest_score_button",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "highestScoreButton"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "highestScorecontainer"
+            }
+          },
+          {
+            "InteractionName": "XbuttonHighestScore",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "XbuttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "highestScorecontainer"
+            }
+          },
+          {
+            "InteractionName": "click_play_button",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "playButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "playScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "playScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_240x320_poly.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "wantEndButton",
+            "X": 51,
+            "Y": 18,
+            "Width": 138,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_active.png",
+            "TextId": "__SingleUse_L3Y7",
+            "ReleasedColor": {
+              "Red": 240,
+              "Green": 36,
+              "Blue": 53
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_rounded_active.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea11",
+            "X": 1,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_R5B7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea21",
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_NEYM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea31",
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_K59M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea41",
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_X113",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea12",
+            "X": 60,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_LU3A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea22",
+            "X": 60,
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_3GGA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea32",
+            "X": 60,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_BWZB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea42",
+            "X": 60,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_4ENB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea13",
+            "X": 120,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_CWQ8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea23",
+            "X": 120,
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_3D3H",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea33",
+            "X": 120,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_1O8L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea43",
+            "X": 120,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_I591",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea14",
+            "X": 180,
+            "Y": 80,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_XIHZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea24",
+            "X": 180,
+            "Y": 140,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_CR7K",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea34",
+            "X": 180,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_EUXA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea44",
+            "X": 180,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "TextId": "__SingleUse_S5H3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 66,
+              "Green": 2,
+              "Blue": 2
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "Container",
+            "Name": "wantEndContainer",
+            "X": 51,
+            "Y": 95,
+            "Width": 138,
+            "Height": 150,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "image2",
+                "Width": 138,
+                "Height": 150,
+                "RelativeFilename": "__generated\\alternate_theme_images_containers_small_narrow_light.png"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea45",
+                "X": 31,
+                "Y": 3,
+                "Width": 77,
+                "Height": 24,
+                "TextId": "__SingleUse_QNAX",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "yesButton",
+                "Y": 47,
+                "Width": 138,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_inactive.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_inactive.png",
+                "TextId": "__SingleUse_XV5M",
+                "ReleasedColor": {
+                  "Red": 7,
+                  "Green": 245,
+                  "Blue": 98
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_inactive.json"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "noButton",
+                "Y": 99,
+                "Width": 138,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_inactive.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_inactive.png",
+                "TextId": "__SingleUse_ODOB",
+                "ReleasedColor": {
+                  "Red": 7,
+                  "Green": 245,
+                  "Blue": 98
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_inactive.json"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "endContainer",
+            "X": 13,
+            "Y": 95,
+            "Width": 214,
+            "Height": 150,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "image3",
+                "Width": 214,
+                "Height": 150,
+                "RelativeFilename": "__generated\\alternate_theme_images_containers_small_wide_outlined_light.png"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea47",
+                "X": 61,
+                "Y": 35,
+                "Width": 86,
+                "Height": 20,
+                "TextId": "__SingleUse_HAPL",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {}
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea46",
+                "X": 40,
+                "Y": 5,
+                "Width": 134,
+                "Height": 20,
+                "TextId": "__SingleUse_PDA5",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "buttonWithLabel1",
+                "X": 38,
+                "Y": 45,
+                "Width": 138,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_active.png",
+                "TextId": "__SingleUse_2EG8",
+                "ReleasedColor": {
+                  "Red": 219,
+                  "Green": 9,
+                  "Blue": 9
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_rounded_active.json"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "buttonWithLabel1_1",
+                "X": 38,
+                "Y": 99,
+                "Width": 138,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_active.png",
+                "TextId": "__SingleUse_2CBJ",
+                "ReleasedColor": {
+                  "Red": 219,
+                  "Green": 9,
+                  "Blue": 9
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_rounded_active.json"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "click_want_end_button",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "wantEndButton"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "wantEndContainer"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "noButton"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "wantEndContainer"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "game2048T1",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "homeScreen",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_D01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.25.0",
+  "CreatedBy": "4.25.0"
+}
