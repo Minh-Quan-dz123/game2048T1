@@ -10,8 +10,8 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
 class playScreenViewBase : public touchgfx::View<playScreenPresenter>
@@ -32,6 +32,24 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image image1;
     touchgfx::ButtonWithLabel wantEndButton;
+    touchgfx::Container container1;
+    touchgfx::Image image4;
+    touchgfx::Box box11;
+    touchgfx::Box box12;
+    touchgfx::Box box13;
+    touchgfx::Box box14;
+    touchgfx::Box box21;
+    touchgfx::Box box22;
+    touchgfx::Box box23;
+    touchgfx::Box box24;
+    touchgfx::Box box31;
+    touchgfx::Box box32;
+    touchgfx::Box box33;
+    touchgfx::Box box34;
+    touchgfx::Box box41;
+    touchgfx::Box box42;
+    touchgfx::Box box43;
+    touchgfx::Box box44;
     touchgfx::TextAreaWithOneWildcard textArea11;
     touchgfx::TextAreaWithOneWildcard textArea21;
     touchgfx::TextAreaWithOneWildcard textArea31;
