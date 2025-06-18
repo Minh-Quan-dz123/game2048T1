@@ -8,7 +8,7 @@
 
 playScreenViewBase::playScreenViewBase() :
     buttonCallback(this, &playScreenViewBase::buttonCallbackHandler),
-    frameCountGoi_enContainerInterval(0)
+    frameCountXuLuLuoiInterval(0)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -215,7 +215,7 @@ playScreenViewBase::playScreenViewBase() :
     textArea43.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EUXA));
     container1.add(textArea43);
 
-    textArea44.setPosition(180, 181, 60, 60);
+    textArea44.setPosition(180, 180, 60, 60);
     textArea44.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea44.setLinespacing(0);
     Unicode::snprintf(textArea44Buffer, TEXTAREA44_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V6IM).getText());
@@ -324,7 +324,7 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
     }
     if (&src == &noButton)
     {
-        //Interaction1
+        //noButton1
         //When noButton clicked hide wantEndContainer
         //Hide wantEndContainer
         wantEndContainer.setVisible(false);
@@ -549,19 +549,23 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //Move box44 to x:180, y:180 with LinearIn easing in 10 ms (1 Ticks)
         box44.clearMoveAnimationEndedAction();
         box44.setMoveAnimationDelay(1);
-        box44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        box44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //khoitaoGame
+        //When STARTbutton clicked call virtual function
+        //Call khoitaogame
+        khoitaogame();
     }
 }
 
 void playScreenViewBase::handleTickEvent()
 {
-    frameCountGoi_enContainerInterval++;
-    if(frameCountGoi_enContainerInterval == TICK_GOI_ENCONTAINER_INTERVAL)
+    frameCountXuLuLuoiInterval++;
+    if(frameCountXuLuLuoiInterval == TICK_XULULUOI_INTERVAL)
     {
-        //goi_enContainer
+        //xuLuLuoi
         //When every N tick call virtual function
-        //Call goi_endContainer
-        goi_endContainer();
-        frameCountGoi_enContainerInterval = 0;
+        //Call xuLyLuoi
+        xuLyLuoi();
+        frameCountXuLuLuoiInterval = 0;
     }
 }

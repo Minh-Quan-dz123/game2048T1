@@ -733,7 +733,7 @@
                 "Type": "TextArea",
                 "Name": "textArea44",
                 "X": 180,
-                "Y": 181,
+                "Y": 180,
                 "Width": 60,
                 "Height": 60,
                 "TextId": "__SingleUse_S5H3",
@@ -952,7 +952,7 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "noButton1",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "noButton"
@@ -983,17 +983,6 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "tinhDiem"
-            }
-          },
-          {
-            "InteractionName": "goi_enContainer",
-            "Trigger": {
-              "Type": "TriggerOnEveryTick",
-              "TickCount": 69
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "goi_endContainer"
             }
           },
           {
@@ -1545,6 +1534,28 @@
               "Duration": 10,
               "AnimationDelay": 10,
               "ActionComponent": "box44"
+            }
+          },
+          {
+            "InteractionName": "xuLuLuoi",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 2
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "xuLyLuoi"
+            }
+          },
+          {
+            "InteractionName": "khoitaoGame",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "khoitaogame"
             }
           }
         ]

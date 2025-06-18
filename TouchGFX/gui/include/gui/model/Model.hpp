@@ -1,6 +1,7 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+#include <cstdint>
 class ModelListener;
 
 class Model
@@ -13,22 +14,25 @@ public:
         modelListener = listener;
     }
 
-    void setScore(int highestscore) // hàm lưu điểm cao nhất người chơi chơi
+    void luuHighestScore(uint32_t highestscore) // lưu điểm cao nhất (từ View->Model)
     {
-    	if(highestscore > highestScore)
-    	{
-    		highestScore = highestscore;
-    	}
+    	highestscore = highestScore;
     }
-    int getScore() const // thêm const để tránh lỗi
+    uint32_t getHighestScore() const // lấy điểm cao nhất (Từ View gọi -> Model -> View
     {
     	return highestScore;
     }
 
+
+
     void tick();
 protected:
     ModelListener* modelListener;
-    int highestScore=2;
+
+    // biến lưu điểm cao nhất
+    uint32_t highestScore = 0;
+
+
 };
 
 #endif // MODEL_HPP

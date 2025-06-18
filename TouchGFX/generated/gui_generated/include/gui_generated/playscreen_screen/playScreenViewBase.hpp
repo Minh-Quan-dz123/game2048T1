@@ -31,7 +31,11 @@ public:
     {
         // Override and implement this function in playScreen
     }
-    virtual void goi_endContainer()
+    virtual void xuLyLuoi()
+    {
+        // Override and implement this function in playScreen
+    }
+    virtual void khoitaogame()
     {
         // Override and implement this function in playScreen
     }
@@ -147,8 +151,8 @@ private:
     /*
      * Tick Counter Declarations
      */
-    static const uint32_t TICK_GOI_ENCONTAINER_INTERVAL = 69;
-    uint32_t frameCountGoi_enContainerInterval;
+    static const uint32_t TICK_XULULUOI_INTERVAL = 2;
+    uint32_t frameCountXuLuLuoiInterval;
 
 };
 
