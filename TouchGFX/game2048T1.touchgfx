@@ -1557,6 +1557,26 @@
               "Type": "ActionCustom",
               "FunctionName": "khoitaogame"
             }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          },
+          {
+            "InteractionName": "ENDbuttonclick2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ENDbutton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "tinhDiem"
+            }
           }
         ]
       }

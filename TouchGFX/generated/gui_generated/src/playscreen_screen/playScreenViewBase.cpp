@@ -354,7 +354,11 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //ENDbuttonclick
         //When ENDbutton clicked change screen to homeScreen
         //Go to homeScreen with no screen transition
-        application().gotohomeScreenScreenNoTransition();
+        application().gotohomeScreenScreenNoTransition();
+        //ENDbuttonclick2
+        //When ENDbutton clicked call virtual function
+        //Call tinhDiem
+        tinhDiem();
     }
     if (&src == &STARTbutton)
     {

@@ -14,12 +14,14 @@ public:
 
     virtual void xuLyLuoi(); // gọi hàm theo chu kỳ từ giao TouchGFX Designer
     virtual void khoitaogame();// khởi tạo game
+    virtual void tinhDiem();// khi kết thúc game
 protected:
     // thêm các hàm và biến
-    uint32_t grid[4][4] = {0};// dữ liệu các box
+    uint32_t grid[4][4];// dữ liệu các box
     uint32_t score = 0; // điểm hiện tại
-    uint8_t newStatus; //
-    uint8_t oldStatus;
+    uint8_t newSta = 0; //
+    uint8_t oldSta = 0;
+    uint8_t batXuLyLuoi=0; // 0 thì là chưa làm gì, 1 là đang chơi, 2 là kết thúc
 
     void batDauGame(); // 1: bắt đầu game = khởi tạo game mới
     void addRamdomBox(); // 2: hiển thị 1 ô bất kì
@@ -30,7 +32,8 @@ protected:
     void moveDown(); // 3: dịch
 
     void updateGiaoDien(); // 4: update giao diện
-    void updateHighestScore(); // 5: kết thúc thì lưu điểm cao nhất
+    void endGame(); // 5 end game
+    void updateHighestScore(); // 6: kết thúc thì lưu điểm cao nhất
     // end
 
     Model* model;     // giao tiếp với Model

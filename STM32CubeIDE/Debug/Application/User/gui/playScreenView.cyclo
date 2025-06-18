@@ -1,15 +1,18 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:30:18:virtual void playScreenViewBase::tinhDiem()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:17:6:virtual void playScreenView::tearDownScreen()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:22:6:virtual void playScreenView::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:11:13:playScreenView::~playScreenView()	1
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:11:13:virtual playScreenView::~playScreenView()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:7:1:playScreenView::playScreenView()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:43:6:void playScreenView::moveRight()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:47:6:void playScreenView::moveLeft()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:51:6:void playScreenView::moveUp()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:55:6:void playScreenView::moveDown()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:61:6:void playScreenView::addRamdomBox()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:67:6:void playScreenView::updateGiaoDien()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:72:6:void playScreenView::updateHighestScore()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:12:6:virtual void playScreenView::setupScreen()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:12:1:playScreenView::playScreenView()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:91:6:void playScreenView::moveRight()	6
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:135:6:void playScreenView::moveLeft()	6
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:170:6:void playScreenView::moveUp()	6
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:206:6:void playScreenView::moveDown()	6
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:243:6:void playScreenView::addRamdomBox()	14
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:17:6:virtual void playScreenView::setupScreen()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:315:6:void playScreenView::updateGiaoDien()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:39:6:void playScreenView::batDauGame()	2
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:34:6:virtual void playScreenView::khoitaogame()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:366:6:void playScreenView::endGame()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:28:6:virtual void playScreenView::tinhDiem()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:55:6:virtual void playScreenView::xuLyLuoi()	9
