@@ -54,6 +54,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/playscreen_screen/playScreenVie
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  generated/images/include/images/BitmapDatabase.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp
@@ -165,6 +167,10 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 

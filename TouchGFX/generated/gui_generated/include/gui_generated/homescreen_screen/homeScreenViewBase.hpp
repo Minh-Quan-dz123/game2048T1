@@ -21,6 +21,14 @@ public:
     virtual ~homeScreenViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void updateHighestScore()
+    {
+        // Override and implement this function in homeScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -39,6 +47,12 @@ protected:
     touchgfx::ButtonWithLabel XbuttonWithLabel1;
     touchgfx::TextArea textArea;
     touchgfx::TextAreaWithOneWildcard highestScoreText;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t HIGHESTSCORETEXT_SIZE = 16;
+    touchgfx::Unicode::UnicodeChar highestScoreTextBuffer[HIGHESTSCORETEXT_SIZE];
 
 private:
 

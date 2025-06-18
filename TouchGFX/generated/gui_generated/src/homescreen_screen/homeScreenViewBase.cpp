@@ -62,6 +62,8 @@ homeScreenViewBase::homeScreenViewBase() :
     highestScoreText.setPosition(8, 46, 199, 55);
     highestScoreText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     highestScoreText.setLinespacing(0);
+    Unicode::snprintf(highestScoreTextBuffer, HIGHESTSCORETEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_56GT).getText());
+    highestScoreText.setWildcard(highestScoreTextBuffer);
     highestScoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MGH9));
     highestScorecontainer.add(highestScoreText);
 
@@ -86,7 +88,11 @@ void homeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When highestScoreButton clicked show highestScorecontainer
         //Show highestScorecontainer
         highestScorecontainer.setVisible(true);
-        highestScorecontainer.invalidate();
+        highestScorecontainer.invalidate();
+        //Interaction1
+        //When highestScoreButton clicked call virtual function
+        //Call updateHighestScore
+        updateHighestScore();
     }
     if (&src == &XbuttonWithLabel1)
     {

@@ -11,6 +11,7 @@ public:
     virtual ~homeScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void updateHighestScore();
 protected:
 };
 

@@ -133,7 +133,11 @@
                 "Height": 55,
                 "TextId": "__SingleUse_MGH9",
                 "TextRotation": "0",
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_56GT",
+                  "UseBuffer": true,
+                  "BufferSize": 16
+                }
               }
             ]
           }
@@ -172,6 +176,17 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "playScreen"
             }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "highestScoreButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "updateHighestScore"
+            }
           }
         ]
       },
@@ -188,12 +203,12 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "wantEndButton",
-            "X": 51,
-            "Y": 18,
-            "Width": 138,
+            "X": 130,
+            "Y": 8,
+            "Width": 100,
             "Height": 36,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_active.png",
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_active.png",
             "TextId": "__SingleUse_L3Y7",
             "ReleasedColor": {
               "Red": 240,
@@ -206,7 +221,7 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_rounded_active.json"
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\tiny_round_active.json"
           },
           {
             "Type": "Container",
@@ -235,7 +250,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box12",
+                "Name": "box21",
                 "X": 60,
                 "Width": 60,
                 "Height": 60,
@@ -247,7 +262,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box13",
+                "Name": "box31",
                 "X": 120,
                 "Width": 60,
                 "Height": 60,
@@ -259,7 +274,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box14",
+                "Name": "box41",
                 "X": 180,
                 "Width": 60,
                 "Height": 60,
@@ -271,7 +286,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box21",
+                "Name": "box12",
                 "Y": 60,
                 "Width": 60,
                 "Height": 60,
@@ -296,7 +311,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box23",
+                "Name": "box32",
                 "X": 120,
                 "Y": 60,
                 "Width": 60,
@@ -309,7 +324,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box24",
+                "Name": "box42",
                 "X": 180,
                 "Y": 60,
                 "Width": 60,
@@ -322,7 +337,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box31",
+                "Name": "box13",
                 "Y": 120,
                 "Width": 60,
                 "Height": 60,
@@ -334,7 +349,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box32",
+                "Name": "box23",
                 "X": 60,
                 "Y": 120,
                 "Width": 60,
@@ -360,7 +375,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box34",
+                "Name": "box43",
                 "X": 180,
                 "Y": 120,
                 "Width": 60,
@@ -373,7 +388,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box41",
+                "Name": "box14",
                 "Y": 180,
                 "Width": 60,
                 "Height": 60,
@@ -385,7 +400,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box42",
+                "Name": "box24",
                 "X": 60,
                 "Y": 180,
                 "Width": 60,
@@ -398,7 +413,7 @@
               },
               {
                 "Type": "Box",
-                "Name": "box43",
+                "Name": "box34",
                 "X": 120,
                 "Y": 180,
                 "Width": 60,
@@ -434,11 +449,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_10X6",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea21",
+                "Name": "textArea12",
                 "Y": 60,
                 "Width": 60,
                 "Height": 60,
@@ -449,11 +468,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_71XW",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea31",
+                "Name": "textArea13",
                 "Y": 120,
                 "Width": 60,
                 "Height": 60,
@@ -464,11 +487,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_4F6K",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea41",
+                "Name": "textArea14",
                 "Y": 180,
                 "Width": 60,
                 "Height": 60,
@@ -479,11 +506,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_HWW2",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea12",
+                "Name": "textArea21",
                 "X": 60,
                 "Width": 60,
                 "Height": 60,
@@ -494,7 +525,11 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_2MJT",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
@@ -510,11 +545,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_BIQA",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea32",
+                "Name": "textArea23",
                 "X": 60,
                 "Y": 120,
                 "Width": 60,
@@ -526,11 +565,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_XO6P",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea42",
+                "Name": "textArea24",
                 "X": 60,
                 "Y": 180,
                 "Width": 60,
@@ -542,11 +585,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_3BNR",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea13",
+                "Name": "textArea31",
                 "X": 120,
                 "Width": 60,
                 "Height": 60,
@@ -557,11 +604,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_XTXL",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea23",
+                "Name": "textArea32",
                 "X": 120,
                 "Y": 60,
                 "Width": 60,
@@ -573,7 +624,11 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_B9VL",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
@@ -589,11 +644,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_7K4R",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea43",
+                "Name": "textArea34",
                 "X": 120,
                 "Y": 180,
                 "Width": 60,
@@ -605,11 +664,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_S7F5",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea14",
+                "Name": "textArea41",
                 "X": 180,
                 "Width": 60,
                 "Height": 60,
@@ -620,11 +683,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_I67B",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea24",
+                "Name": "textArea42",
                 "X": 180,
                 "Y": 60,
                 "Width": 60,
@@ -636,11 +703,15 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_H280",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea34",
+                "Name": "textArea43",
                 "X": 180,
                 "Y": 120,
                 "Width": 60,
@@ -652,13 +723,17 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_GKPS",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
                 "Name": "textArea44",
                 "X": 180,
-                "Y": 180,
+                "Y": 181,
                 "Width": 60,
                 "Height": 60,
                 "TextId": "__SingleUse_S5H3",
@@ -668,7 +743,11 @@
                   "Green": 2,
                   "Blue": 2
                 },
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_V6IM",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               }
             ]
           },
@@ -763,32 +842,36 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea47",
-                "X": 61,
-                "Y": 35,
-                "Width": 86,
-                "Height": 20,
+                "Name": "YourScoreText_IS",
+                "X": 25,
+                "Y": 25,
+                "Width": 161,
+                "Height": 32,
+                "LockPosition": true,
                 "TextId": "__SingleUse_HAPL",
                 "TextRotation": "0",
-                "AutoSize": true,
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_WULV",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "TextArea",
-                "Name": "textArea46",
-                "X": 40,
-                "Y": 5,
-                "Width": 134,
-                "Height": 20,
+                "Name": "YourScoreISText",
+                "X": 71,
+                "Y": 3,
+                "Width": 67,
+                "Height": 12,
                 "TextId": "__SingleUse_PDA5",
                 "TextRotation": "0",
                 "AutoSize": true
               },
               {
                 "Type": "ButtonWithLabel",
-                "Name": "buttonWithLabel1",
+                "Name": "ENDbutton",
                 "X": 38,
-                "Y": 45,
+                "Y": 67,
                 "Width": 138,
                 "Height": 36,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.png",
@@ -809,9 +892,9 @@
               },
               {
                 "Type": "ButtonWithLabel",
-                "Name": "buttonWithLabel1_1",
+                "Name": "CONTINUEbutton",
                 "X": 38,
-                "Y": 99,
+                "Y": 110,
                 "Width": 138,
                 "Height": 36,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.png",
@@ -831,6 +914,29 @@
                 "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_rounded_active.json"
               }
             ]
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "STARTbutton",
+            "X": 10,
+            "Y": 8,
+            "Width": 100,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_round_active.png",
+            "TextId": "__SingleUse_TO8F",
+            "ReleasedColor": {
+              "Red": 240,
+              "Green": 36,
+              "Blue": 53
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\tiny_round_active.json"
           }
         ],
         "Interactions": [
@@ -854,6 +960,591 @@
             "Action": {
               "Type": "ActionHide",
               "ActionComponent": "wantEndContainer"
+            }
+          },
+          {
+            "InteractionName": "yesButton1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "yesButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "homeScreen"
+            }
+          },
+          {
+            "InteractionName": "yesButton2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "yesButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "tinhDiem"
+            }
+          },
+          {
+            "InteractionName": "goi_enContainer",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 69
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "goi_endContainer"
+            }
+          },
+          {
+            "InteractionName": "CONTINUEbuttonclick",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "CONTINUEbutton"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "endContainer"
+            }
+          },
+          {
+            "InteractionName": "ENDbuttonclick",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ENDbutton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "homeScreen"
+            }
+          },
+          {
+            "InteractionName": "startTextArea11",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea11"
+            }
+          },
+          {
+            "InteractionName": "startTextArea12",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea12"
+            }
+          },
+          {
+            "InteractionName": "startTextArea13",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea13"
+            }
+          },
+          {
+            "InteractionName": "startTextArea14",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea14"
+            }
+          },
+          {
+            "InteractionName": "startTextArea21",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea21"
+            }
+          },
+          {
+            "InteractionName": "startTextArea22",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea22"
+            }
+          },
+          {
+            "InteractionName": "startTextArea23",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea23"
+            }
+          },
+          {
+            "InteractionName": "startTextArea24",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea24"
+            }
+          },
+          {
+            "InteractionName": "startTextArea31",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea31"
+            }
+          },
+          {
+            "InteractionName": "startTextArea32",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea32"
+            }
+          },
+          {
+            "InteractionName": "startTextArea33",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea33"
+            }
+          },
+          {
+            "InteractionName": "startTextArea34",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea34"
+            }
+          },
+          {
+            "InteractionName": "startTextArea41",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea41"
+            }
+          },
+          {
+            "InteractionName": "startTextArea42",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea42"
+            }
+          },
+          {
+            "InteractionName": "startTextArea43",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea43"
+            }
+          },
+          {
+            "InteractionName": "startTextArea44",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "textArea44"
+            }
+          },
+          {
+            "InteractionName": "startBox11",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box11"
+            }
+          },
+          {
+            "InteractionName": "startBox21",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box21"
+            }
+          },
+          {
+            "InteractionName": "startBox31",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box31"
+            }
+          },
+          {
+            "InteractionName": "startBox41",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box41"
+            }
+          },
+          {
+            "InteractionName": "startBox12",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box12"
+            }
+          },
+          {
+            "InteractionName": "startBox22",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box22"
+            }
+          },
+          {
+            "InteractionName": "startBox32",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box32"
+            }
+          },
+          {
+            "InteractionName": "startBox42",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Y": 60,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box42"
+            }
+          },
+          {
+            "InteractionName": "startBox13",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box13"
+            }
+          },
+          {
+            "InteractionName": "startBox23",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box23"
+            }
+          },
+          {
+            "InteractionName": "startBox33",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box33"
+            }
+          },
+          {
+            "InteractionName": "startBox43",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Y": 120,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box43"
+            }
+          },
+          {
+            "InteractionName": "startBox14",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box14"
+            }
+          },
+          {
+            "InteractionName": "startBox24",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 60,
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box24"
+            }
+          },
+          {
+            "InteractionName": "startBox34",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 120,
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box34"
+            }
+          },
+          {
+            "InteractionName": "startBox44",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STARTbutton"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 180,
+              "Y": 180,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 10,
+              "AnimationDelay": 10,
+              "ActionComponent": "box44"
             }
           }
         ]

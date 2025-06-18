@@ -54,6 +54,8 @@ Application/User/generated/playScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
@@ -111,6 +113,8 @@ Application/User/generated/playScreenViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

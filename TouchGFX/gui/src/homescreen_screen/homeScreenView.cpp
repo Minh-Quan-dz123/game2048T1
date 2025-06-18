@@ -14,3 +14,8 @@ void homeScreenView::tearDownScreen()
 {
     homeScreenViewBase::tearDownScreen();
 }
+
+void homeScreenView::updateHighestScore()
+{
+
+}

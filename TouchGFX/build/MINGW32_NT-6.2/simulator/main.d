@@ -85,6 +85,8 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/playscreen_screen/playScreenView.hpp \
  generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp \
  gui/include/gui/playscreen_screen/playScreenPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp \
  generated/simulator/include/simulator/mainBase.hpp
@@ -260,6 +262,10 @@ gui/include/gui/playscreen_screen/playScreenView.hpp:
 generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:
 
 gui/include/gui/playscreen_screen/playScreenPresenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 

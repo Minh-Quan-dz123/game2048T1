@@ -7,7 +7,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 playScreenViewBase::playScreenViewBase() :
-    buttonCallback(this, &playScreenViewBase::buttonCallbackHandler)
+    buttonCallback(this, &playScreenViewBase::buttonCallbackHandler),
+    frameCountGoi_enContainerInterval(0)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -17,8 +18,8 @@ playScreenViewBase::playScreenViewBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_BACKGROUNDS_240X320_POLY_ID));
     add(image1);
 
-    wantEndButton.setXY(51, 18);
-    wantEndButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_PRESSED_ID));
+    wantEndButton.setXY(130, 8);
+    wantEndButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_TINY_ROUND_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_TINY_ROUND_PRESSED_ID));
     wantEndButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_L3Y7));
     wantEndButton.setLabelColor(touchgfx::Color::getColorFromRGB(240, 36, 53));
     wantEndButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -34,61 +35,61 @@ playScreenViewBase::playScreenViewBase() :
     box11.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     container1.add(box11);
 
-    box12.setPosition(60, 0, 60, 60);
-    box12.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box12);
-
-    box13.setPosition(120, 0, 60, 60);
-    box13.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box13);
-
-    box14.setPosition(180, 0, 60, 60);
-    box14.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box14);
-
-    box21.setPosition(0, 60, 60, 60);
+    box21.setPosition(60, 0, 60, 60);
     box21.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     container1.add(box21);
+
+    box31.setPosition(120, 0, 60, 60);
+    box31.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box31);
+
+    box41.setPosition(180, 0, 60, 60);
+    box41.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box41);
+
+    box12.setPosition(0, 60, 60, 60);
+    box12.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box12);
 
     box22.setPosition(60, 60, 60, 60);
     box22.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     container1.add(box22);
 
-    box23.setPosition(120, 60, 60, 60);
-    box23.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box23);
-
-    box24.setPosition(180, 60, 60, 60);
-    box24.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box24);
-
-    box31.setPosition(0, 120, 60, 60);
-    box31.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box31);
-
-    box32.setPosition(60, 120, 60, 60);
+    box32.setPosition(120, 60, 60, 60);
     box32.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     container1.add(box32);
+
+    box42.setPosition(180, 60, 60, 60);
+    box42.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box42);
+
+    box13.setPosition(0, 120, 60, 60);
+    box13.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box13);
+
+    box23.setPosition(60, 120, 60, 60);
+    box23.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box23);
 
     box33.setPosition(120, 120, 60, 60);
     box33.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     container1.add(box33);
 
-    box34.setPosition(180, 120, 60, 60);
-    box34.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box34);
-
-    box41.setPosition(0, 180, 60, 60);
-    box41.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box41);
-
-    box42.setPosition(60, 180, 60, 60);
-    box42.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box42);
-
-    box43.setPosition(120, 180, 60, 60);
+    box43.setPosition(180, 120, 60, 60);
     box43.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     container1.add(box43);
+
+    box14.setPosition(0, 180, 60, 60);
+    box14.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box14);
+
+    box24.setPosition(60, 180, 60, 60);
+    box24.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box24);
+
+    box34.setPosition(120, 180, 60, 60);
+    box34.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container1.add(box34);
 
     box44.setPosition(180, 180, 60, 60);
     box44.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -97,96 +98,128 @@ playScreenViewBase::playScreenViewBase() :
     textArea11.setPosition(0, 0, 60, 60);
     textArea11.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea11.setLinespacing(0);
+    Unicode::snprintf(textArea11Buffer, TEXTAREA11_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_10X6).getText());
+    textArea11.setWildcard(textArea11Buffer);
     textArea11.setTypedText(touchgfx::TypedText(T___SINGLEUSE_R5B7));
     container1.add(textArea11);
 
-    textArea21.setPosition(0, 60, 60, 60);
-    textArea21.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea21.setLinespacing(0);
-    textArea21.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NEYM));
-    container1.add(textArea21);
-
-    textArea31.setPosition(0, 120, 60, 60);
-    textArea31.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea31.setLinespacing(0);
-    textArea31.setTypedText(touchgfx::TypedText(T___SINGLEUSE_K59M));
-    container1.add(textArea31);
-
-    textArea41.setPosition(0, 180, 60, 60);
-    textArea41.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea41.setLinespacing(0);
-    textArea41.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X113));
-    container1.add(textArea41);
-
-    textArea12.setPosition(60, 0, 60, 60);
+    textArea12.setPosition(0, 60, 60, 60);
     textArea12.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea12.setLinespacing(0);
-    textArea12.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LU3A));
+    Unicode::snprintf(textArea12Buffer, TEXTAREA12_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_71XW).getText());
+    textArea12.setWildcard(textArea12Buffer);
+    textArea12.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NEYM));
     container1.add(textArea12);
+
+    textArea13.setPosition(0, 120, 60, 60);
+    textArea13.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea13.setLinespacing(0);
+    Unicode::snprintf(textArea13Buffer, TEXTAREA13_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_4F6K).getText());
+    textArea13.setWildcard(textArea13Buffer);
+    textArea13.setTypedText(touchgfx::TypedText(T___SINGLEUSE_K59M));
+    container1.add(textArea13);
+
+    textArea14.setPosition(0, 180, 60, 60);
+    textArea14.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea14.setLinespacing(0);
+    Unicode::snprintf(textArea14Buffer, TEXTAREA14_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_HWW2).getText());
+    textArea14.setWildcard(textArea14Buffer);
+    textArea14.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X113));
+    container1.add(textArea14);
+
+    textArea21.setPosition(60, 0, 60, 60);
+    textArea21.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea21.setLinespacing(0);
+    Unicode::snprintf(textArea21Buffer, TEXTAREA21_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2MJT).getText());
+    textArea21.setWildcard(textArea21Buffer);
+    textArea21.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LU3A));
+    container1.add(textArea21);
 
     textArea22.setPosition(60, 60, 60, 60);
     textArea22.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea22.setLinespacing(0);
+    Unicode::snprintf(textArea22Buffer, TEXTAREA22_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BIQA).getText());
+    textArea22.setWildcard(textArea22Buffer);
     textArea22.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3GGA));
     container1.add(textArea22);
 
-    textArea32.setPosition(60, 120, 60, 60);
-    textArea32.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea32.setLinespacing(0);
-    textArea32.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BWZB));
-    container1.add(textArea32);
-
-    textArea42.setPosition(60, 180, 60, 60);
-    textArea42.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea42.setLinespacing(0);
-    textArea42.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4ENB));
-    container1.add(textArea42);
-
-    textArea13.setPosition(120, 0, 60, 60);
-    textArea13.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea13.setLinespacing(0);
-    textArea13.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CWQ8));
-    container1.add(textArea13);
-
-    textArea23.setPosition(120, 60, 60, 60);
+    textArea23.setPosition(60, 120, 60, 60);
     textArea23.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea23.setLinespacing(0);
-    textArea23.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3D3H));
+    Unicode::snprintf(textArea23Buffer, TEXTAREA23_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XO6P).getText());
+    textArea23.setWildcard(textArea23Buffer);
+    textArea23.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BWZB));
     container1.add(textArea23);
+
+    textArea24.setPosition(60, 180, 60, 60);
+    textArea24.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea24.setLinespacing(0);
+    Unicode::snprintf(textArea24Buffer, TEXTAREA24_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3BNR).getText());
+    textArea24.setWildcard(textArea24Buffer);
+    textArea24.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4ENB));
+    container1.add(textArea24);
+
+    textArea31.setPosition(120, 0, 60, 60);
+    textArea31.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea31.setLinespacing(0);
+    Unicode::snprintf(textArea31Buffer, TEXTAREA31_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XTXL).getText());
+    textArea31.setWildcard(textArea31Buffer);
+    textArea31.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CWQ8));
+    container1.add(textArea31);
+
+    textArea32.setPosition(120, 60, 60, 60);
+    textArea32.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea32.setLinespacing(0);
+    Unicode::snprintf(textArea32Buffer, TEXTAREA32_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_B9VL).getText());
+    textArea32.setWildcard(textArea32Buffer);
+    textArea32.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3D3H));
+    container1.add(textArea32);
 
     textArea33.setPosition(120, 120, 60, 60);
     textArea33.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea33.setLinespacing(0);
+    Unicode::snprintf(textArea33Buffer, TEXTAREA33_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7K4R).getText());
+    textArea33.setWildcard(textArea33Buffer);
     textArea33.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1O8L));
     container1.add(textArea33);
 
-    textArea43.setPosition(120, 180, 60, 60);
-    textArea43.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea43.setLinespacing(0);
-    textArea43.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I591));
-    container1.add(textArea43);
-
-    textArea14.setPosition(180, 0, 60, 60);
-    textArea14.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea14.setLinespacing(0);
-    textArea14.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XIHZ));
-    container1.add(textArea14);
-
-    textArea24.setPosition(180, 60, 60, 60);
-    textArea24.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
-    textArea24.setLinespacing(0);
-    textArea24.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CR7K));
-    container1.add(textArea24);
-
-    textArea34.setPosition(180, 120, 60, 60);
+    textArea34.setPosition(120, 180, 60, 60);
     textArea34.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea34.setLinespacing(0);
-    textArea34.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EUXA));
+    Unicode::snprintf(textArea34Buffer, TEXTAREA34_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_S7F5).getText());
+    textArea34.setWildcard(textArea34Buffer);
+    textArea34.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I591));
     container1.add(textArea34);
 
-    textArea44.setPosition(180, 180, 60, 60);
+    textArea41.setPosition(180, 0, 60, 60);
+    textArea41.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea41.setLinespacing(0);
+    Unicode::snprintf(textArea41Buffer, TEXTAREA41_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_I67B).getText());
+    textArea41.setWildcard(textArea41Buffer);
+    textArea41.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XIHZ));
+    container1.add(textArea41);
+
+    textArea42.setPosition(180, 60, 60, 60);
+    textArea42.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea42.setLinespacing(0);
+    Unicode::snprintf(textArea42Buffer, TEXTAREA42_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H280).getText());
+    textArea42.setWildcard(textArea42Buffer);
+    textArea42.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CR7K));
+    container1.add(textArea42);
+
+    textArea43.setPosition(180, 120, 60, 60);
+    textArea43.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
+    textArea43.setLinespacing(0);
+    Unicode::snprintf(textArea43Buffer, TEXTAREA43_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GKPS).getText());
+    textArea43.setWildcard(textArea43Buffer);
+    textArea43.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EUXA));
+    container1.add(textArea43);
+
+    textArea44.setPosition(180, 181, 60, 60);
     textArea44.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea44.setLinespacing(0);
+    Unicode::snprintf(textArea44Buffer, TEXTAREA44_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V6IM).getText());
+    textArea44.setWildcard(textArea44Buffer);
     textArea44.setTypedText(touchgfx::TypedText(T___SINGLEUSE_S5H3));
     container1.add(textArea44);
 
@@ -209,6 +242,7 @@ playScreenViewBase::playScreenViewBase() :
     yesButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_XV5M));
     yesButton.setLabelColor(touchgfx::Color::getColorFromRGB(7, 245, 98));
     yesButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    yesButton.setAction(buttonCallback);
     wantEndContainer.add(yesButton);
 
     noButton.setXY(0, 99);
@@ -227,33 +261,45 @@ playScreenViewBase::playScreenViewBase() :
     image3.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_CONTAINERS_SMALL_WIDE_OUTLINED_LIGHT_ID));
     endContainer.add(image3);
 
-    textArea47.setXY(61, 35);
-    textArea47.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea47.setLinespacing(0);
-    textArea47.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HAPL));
-    endContainer.add(textArea47);
+    YourScoreText_IS.setPosition(25, 25, 161, 32);
+    YourScoreText_IS.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    YourScoreText_IS.setLinespacing(0);
+    Unicode::snprintf(YourScoreText_ISBuffer, YOURSCORETEXT_IS_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_WULV).getText());
+    YourScoreText_IS.setWildcard(YourScoreText_ISBuffer);
+    YourScoreText_IS.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HAPL));
+    endContainer.add(YourScoreText_IS);
 
-    textArea46.setXY(40, 5);
-    textArea46.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea46.setLinespacing(0);
-    textArea46.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PDA5));
-    endContainer.add(textArea46);
+    YourScoreISText.setXY(71, 3);
+    YourScoreISText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    YourScoreISText.setLinespacing(0);
+    YourScoreISText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PDA5));
+    endContainer.add(YourScoreISText);
 
-    buttonWithLabel1.setXY(38, 45);
-    buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_PRESSED_ID));
-    buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2EG8));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(219, 9, 9));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    endContainer.add(buttonWithLabel1);
+    ENDbutton.setXY(38, 67);
+    ENDbutton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_PRESSED_ID));
+    ENDbutton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2EG8));
+    ENDbutton.setLabelColor(touchgfx::Color::getColorFromRGB(219, 9, 9));
+    ENDbutton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ENDbutton.setAction(buttonCallback);
+    endContainer.add(ENDbutton);
 
-    buttonWithLabel1_1.setXY(38, 99);
-    buttonWithLabel1_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_PRESSED_ID));
-    buttonWithLabel1_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2CBJ));
-    buttonWithLabel1_1.setLabelColor(touchgfx::Color::getColorFromRGB(219, 9, 9));
-    buttonWithLabel1_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    endContainer.add(buttonWithLabel1_1);
+    CONTINUEbutton.setXY(38, 110);
+    CONTINUEbutton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUNDED_PRESSED_ID));
+    CONTINUEbutton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2CBJ));
+    CONTINUEbutton.setLabelColor(touchgfx::Color::getColorFromRGB(219, 9, 9));
+    CONTINUEbutton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CONTINUEbutton.setAction(buttonCallback);
+    endContainer.add(CONTINUEbutton);
 
     add(endContainer);
+
+    STARTbutton.setXY(10, 8);
+    STARTbutton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_TINY_ROUND_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_TINY_ROUND_PRESSED_ID));
+    STARTbutton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_TO8F));
+    STARTbutton.setLabelColor(touchgfx::Color::getColorFromRGB(240, 36, 53));
+    STARTbutton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    STARTbutton.setAction(buttonCallback);
+    add(STARTbutton);
 }
 
 playScreenViewBase::~playScreenViewBase()
@@ -283,5 +329,239 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //Hide wantEndContainer
         wantEndContainer.setVisible(false);
         wantEndContainer.invalidate();
+    }
+    if (&src == &yesButton)
+    {
+        //yesButton1
+        //When yesButton clicked change screen to homeScreen
+        //Go to homeScreen with no screen transition
+        application().gotohomeScreenScreenNoTransition();
+        //yesButton2
+        //When yesButton clicked call virtual function
+        //Call tinhDiem
+        tinhDiem();
+    }
+    if (&src == &CONTINUEbutton)
+    {
+        //CONTINUEbuttonclick
+        //When CONTINUEbutton clicked hide endContainer
+        //Hide endContainer
+        endContainer.setVisible(false);
+        endContainer.invalidate();
+    }
+    if (&src == &ENDbutton)
+    {
+        //ENDbuttonclick
+        //When ENDbutton clicked change screen to homeScreen
+        //Go to homeScreen with no screen transition
+        application().gotohomeScreenScreenNoTransition();
+    }
+    if (&src == &STARTbutton)
+    {
+        //startTextArea11
+        //When STARTbutton clicked move textArea11
+        //Move textArea11 to x:0, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        textArea11.clearMoveAnimationEndedAction();
+        textArea11.setMoveAnimationDelay(1);
+        textArea11.startMoveAnimation(0, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea12
+        //When STARTbutton clicked move textArea12
+        //Move textArea12 to x:0, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        textArea12.clearMoveAnimationEndedAction();
+        textArea12.setMoveAnimationDelay(1);
+        textArea12.startMoveAnimation(0, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea13
+        //When STARTbutton clicked move textArea13
+        //Move textArea13 to x:0, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        textArea13.clearMoveAnimationEndedAction();
+        textArea13.setMoveAnimationDelay(1);
+        textArea13.startMoveAnimation(0, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea14
+        //When STARTbutton clicked move textArea14
+        //Move textArea14 to x:0, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        textArea14.clearMoveAnimationEndedAction();
+        textArea14.setMoveAnimationDelay(1);
+        textArea14.startMoveAnimation(0, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea21
+        //When STARTbutton clicked move textArea21
+        //Move textArea21 to x:60, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        textArea21.clearMoveAnimationEndedAction();
+        textArea21.setMoveAnimationDelay(1);
+        textArea21.startMoveAnimation(60, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea22
+        //When STARTbutton clicked move textArea22
+        //Move textArea22 to x:60, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        textArea22.clearMoveAnimationEndedAction();
+        textArea22.setMoveAnimationDelay(1);
+        textArea22.startMoveAnimation(60, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea23
+        //When STARTbutton clicked move textArea23
+        //Move textArea23 to x:60, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        textArea23.clearMoveAnimationEndedAction();
+        textArea23.setMoveAnimationDelay(1);
+        textArea23.startMoveAnimation(60, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea24
+        //When STARTbutton clicked move textArea24
+        //Move textArea24 to x:60, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        textArea24.clearMoveAnimationEndedAction();
+        textArea24.setMoveAnimationDelay(1);
+        textArea24.startMoveAnimation(60, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea31
+        //When STARTbutton clicked move textArea31
+        //Move textArea31 to x:120, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        textArea31.clearMoveAnimationEndedAction();
+        textArea31.setMoveAnimationDelay(1);
+        textArea31.startMoveAnimation(120, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea32
+        //When STARTbutton clicked move textArea32
+        //Move textArea32 to x:120, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        textArea32.clearMoveAnimationEndedAction();
+        textArea32.setMoveAnimationDelay(1);
+        textArea32.startMoveAnimation(120, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea33
+        //When STARTbutton clicked move textArea33
+        //Move textArea33 to x:120, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        textArea33.clearMoveAnimationEndedAction();
+        textArea33.setMoveAnimationDelay(1);
+        textArea33.startMoveAnimation(120, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea34
+        //When STARTbutton clicked move textArea34
+        //Move textArea34 to x:120, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        textArea34.clearMoveAnimationEndedAction();
+        textArea34.setMoveAnimationDelay(1);
+        textArea34.startMoveAnimation(120, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea41
+        //When STARTbutton clicked move textArea41
+        //Move textArea41 to x:180, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        textArea41.clearMoveAnimationEndedAction();
+        textArea41.setMoveAnimationDelay(1);
+        textArea41.startMoveAnimation(180, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea42
+        //When STARTbutton clicked move textArea42
+        //Move textArea42 to x:180, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        textArea42.clearMoveAnimationEndedAction();
+        textArea42.setMoveAnimationDelay(1);
+        textArea42.startMoveAnimation(180, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea43
+        //When STARTbutton clicked move textArea43
+        //Move textArea43 to x:180, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        textArea43.clearMoveAnimationEndedAction();
+        textArea43.setMoveAnimationDelay(1);
+        textArea43.startMoveAnimation(180, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startTextArea44
+        //When STARTbutton clicked move textArea44
+        //Move textArea44 to x:180, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        textArea44.clearMoveAnimationEndedAction();
+        textArea44.setMoveAnimationDelay(1);
+        textArea44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox11
+        //When STARTbutton clicked move box11
+        //Move box11 to x:0, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        box11.clearMoveAnimationEndedAction();
+        box11.setMoveAnimationDelay(1);
+        box11.startMoveAnimation(0, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox21
+        //When STARTbutton clicked move box21
+        //Move box21 to x:60, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        box21.clearMoveAnimationEndedAction();
+        box21.setMoveAnimationDelay(1);
+        box21.startMoveAnimation(60, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox31
+        //When STARTbutton clicked move box31
+        //Move box31 to x:120, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        box31.clearMoveAnimationEndedAction();
+        box31.setMoveAnimationDelay(1);
+        box31.startMoveAnimation(120, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox41
+        //When STARTbutton clicked move box41
+        //Move box41 to x:180, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        box41.clearMoveAnimationEndedAction();
+        box41.setMoveAnimationDelay(1);
+        box41.startMoveAnimation(180, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox12
+        //When STARTbutton clicked move box12
+        //Move box12 to x:0, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        box12.clearMoveAnimationEndedAction();
+        box12.setMoveAnimationDelay(1);
+        box12.startMoveAnimation(0, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox22
+        //When STARTbutton clicked move box22
+        //Move box22 to x:60, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        box22.clearMoveAnimationEndedAction();
+        box22.setMoveAnimationDelay(1);
+        box22.startMoveAnimation(60, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox32
+        //When STARTbutton clicked move box32
+        //Move box32 to x:120, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        box32.clearMoveAnimationEndedAction();
+        box32.setMoveAnimationDelay(1);
+        box32.startMoveAnimation(120, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox42
+        //When STARTbutton clicked move box42
+        //Move box42 to x:180, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        box42.clearMoveAnimationEndedAction();
+        box42.setMoveAnimationDelay(1);
+        box42.startMoveAnimation(180, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox13
+        //When STARTbutton clicked move box13
+        //Move box13 to x:0, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        box13.clearMoveAnimationEndedAction();
+        box13.setMoveAnimationDelay(1);
+        box13.startMoveAnimation(0, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox23
+        //When STARTbutton clicked move box23
+        //Move box23 to x:60, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        box23.clearMoveAnimationEndedAction();
+        box23.setMoveAnimationDelay(1);
+        box23.startMoveAnimation(60, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox33
+        //When STARTbutton clicked move box33
+        //Move box33 to x:120, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        box33.clearMoveAnimationEndedAction();
+        box33.setMoveAnimationDelay(1);
+        box33.startMoveAnimation(120, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox43
+        //When STARTbutton clicked move box43
+        //Move box43 to x:180, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        box43.clearMoveAnimationEndedAction();
+        box43.setMoveAnimationDelay(1);
+        box43.startMoveAnimation(180, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox14
+        //When STARTbutton clicked move box14
+        //Move box14 to x:0, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        box14.clearMoveAnimationEndedAction();
+        box14.setMoveAnimationDelay(1);
+        box14.startMoveAnimation(0, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox24
+        //When STARTbutton clicked move box24
+        //Move box24 to x:60, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        box24.clearMoveAnimationEndedAction();
+        box24.setMoveAnimationDelay(1);
+        box24.startMoveAnimation(60, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox34
+        //When STARTbutton clicked move box34
+        //Move box34 to x:120, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        box34.clearMoveAnimationEndedAction();
+        box34.setMoveAnimationDelay(1);
+        box34.startMoveAnimation(120, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //startBox44
+        //When STARTbutton clicked move box44
+        //Move box44 to x:180, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        box44.clearMoveAnimationEndedAction();
+        box44.setMoveAnimationDelay(1);
+        box44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+    }
+}
+
+void playScreenViewBase::handleTickEvent()
+{
+    frameCountGoi_enContainerInterval++;
+    if(frameCountGoi_enContainerInterval == TICK_GOI_ENCONTAINER_INTERVAL)
+    {
+        //goi_enContainer
+        //When every N tick call virtual function
+        //Call goi_endContainer
+        goi_endContainer();
+        frameCountGoi_enContainerInterval = 0;
     }
 }

@@ -63,6 +63,8 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenPresenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -129,6 +131,8 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenPresenter.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:

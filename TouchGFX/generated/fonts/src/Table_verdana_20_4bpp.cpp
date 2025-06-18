@@ -11,7 +11,7 @@ KEEP extern const touchgfx::GlyphNode glyphs_verdana_20_4bpp[] FONT_TABLE_LOCATI
     {   238, 0x0034,  12,  14,  14,   0,  13,   0,   0, 0x00 },
     {   322, 0x0038,  11,  14,  14,   1,  13,   0,   0, 0x00 },
     {   406, 0x003F,   9,  14,  14,   1,  11,   0,   0, 0x00 },
-    {   476, 0x0041,  14,  14,  14,   0,  14,   0,   2, 0x00 },
+    {   476, 0x0041,  14,  14,  14,   0,  14,   0,   1, 0x00 },
     {   574, 0x0043,  13,  14,  14,   1,  14,   0,   0, 0x00 },
     {   672, 0x0044,  14,  14,  14,   1,  15,   0,   0, 0x00 },
     {   770, 0x0045,  11,  14,  14,   1,  13,   0,   0, 0x00 },
@@ -23,16 +23,9 @@ KEEP extern const touchgfx::GlyphNode glyphs_verdana_20_4bpp[] FONT_TABLE_LOCATI
     {  1302, 0x004F,  14,  14,  14,   1,  16,   0,   0, 0x00 },
     {  1400, 0x0052,  13,  14,  14,   1,  14,   0,   0, 0x00 },
     {  1498, 0x0053,  12,  14,  14,   1,  14,   0,   0, 0x00 },
-    {  1582, 0x0054,  13,  14,  14,   0,  12,   2,   3, 0x00 },
+    {  1582, 0x0054,  13,  14,  14,   0,  12,   1,   2, 0x00 },
     {  1680, 0x0055,  12,  14,  14,   1,  15,   0,   0, 0x00 },
-    {  1764, 0x0058,  13,  14,  14,   0,  14,   0,   0, 0x00 },
-    {  1862, 0x0059,  13,  14,  14,   0,  12,   5,   1, 0x00 },
-    {  1960, 0x0063,   9,  11,  11,   1,  10,   6,   1, 0x00 },
-    {  2015, 0x0065,  10,  11,  11,   1,  12,   7,   2, 0x00 },
-    {  2070, 0x006F,  11,  11,  11,   1,  12,   9,   2, 0x00 },
-    {  2136, 0x0072,   8,  11,  11,   1,   9,  11,   2, 0x00 },
-    {  2180, 0x0073,   9,  11,  11,   1,  10,  13,   2, 0x00 },
-    {  2235, 0x0075,  10,  11,  11,   1,  13,  15,   2, 0x00 }
+    {  1764, 0x0058,  13,  14,  14,   0,  14,   0,   0, 0x00 }
 };
 
 // verdana_20_4bpp
@@ -50,6 +43,6 @@ touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_20_4bpp()
 {
-    static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 29, 20, 20, 0, 0, 4, 1, 0, 1, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 22, 20, 20, 0, 0, 4, 1, 0, 1, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
     return verdana_20_4bpp;
 }

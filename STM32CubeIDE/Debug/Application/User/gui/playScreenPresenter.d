@@ -54,7 +54,9 @@ Application/User/gui/playScreenPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -110,3 +112,5 @@ Application/User/gui/playScreenPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:

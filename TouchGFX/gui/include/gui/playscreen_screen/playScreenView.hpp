@@ -12,6 +12,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 protected:
+    uint32_t diem=2;// thêm biến điểm cao nhất
 };
 
 #endif // PLAYSCREENVIEW_HPP

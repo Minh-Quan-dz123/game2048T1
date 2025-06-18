@@ -65,6 +65,8 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenPresenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
@@ -194,6 +196,8 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenPresenter.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:

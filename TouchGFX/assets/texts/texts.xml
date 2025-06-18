@@ -6,16 +6,73 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_TO8F" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">START</Translation>
+      </Text>
+      <Text Id="__SingleUse_WULV" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_V6IM" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_S7F5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_3BNR" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_HWW2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_GKPS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_7K4R" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_XO6P" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_4F6K" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_H280" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_B9VL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_BIQA" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_71XW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_I67B" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_XTXL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_2MJT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_10X6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_56GT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">2</Translation>
+      </Text>
       <Text Id="__SingleUse_2CBJ" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">CONTINUE</Translation>
       </Text>
       <Text Id="__SingleUse_2EG8" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">END</Translation>
       </Text>
-      <Text Id="__SingleUse_HAPL" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_HAPL" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_PDA5" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_PDA5" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">Your Score Is</Translation>
       </Text>
       <Text Id="__SingleUse_ODOB" Alignment="Center" TypographyId="Small">

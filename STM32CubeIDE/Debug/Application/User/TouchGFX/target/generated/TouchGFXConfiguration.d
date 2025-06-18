@@ -66,6 +66,8 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenPresenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp \
@@ -180,6 +182,8 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenPresenter.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 ../../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp:

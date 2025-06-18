@@ -148,8 +148,8 @@ uint32_t I2c3Timeout = I2C3_TIMEOUT_MAX; /*<! Value of Timeout when I2C communic
 uint32_t Spi5Timeout = SPI5_TIMEOUT_MAX; /*<! Value of Timeout when SPI communication fails */
 
 //Thêm biến cho joystick
-uint8_t newStatus=0;// trạng thái của joystick
-uint8_t oldStatus=0;
+volatile uint8_t newStatus=0;// trạng thái của joystick
+volatile uint8_t oldStatus=0;
 
 uint16_t adc_buffer[2];// lưu data của ADC6
 uint16_t joyStick_TamO=2700;

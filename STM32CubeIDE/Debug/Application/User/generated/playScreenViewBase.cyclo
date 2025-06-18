@@ -23,21 +23,32 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:403:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextArea::getWildcard2() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
+../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:30:18:virtual void playScreenViewBase::tinhDiem()	1
+../../TouchGFX/generated/gui_generated/include/gui_generated/playscreen_screen/playScreenViewBase.hpp:34:18:virtual void playScreenViewBase::goi_endContainer()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<playScreenPresenter>::~View()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::Box>::~MoveAnimator()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::TextAreaWithOneWildcard>::~MoveAnimator()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<playScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:259:1:playScreenViewBase::~playScreenViewBase()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:264:6:virtual void playScreenViewBase::setupScreen()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:305:1:playScreenViewBase::~playScreenViewBase()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:310:6:virtual void playScreenViewBase::setupScreen()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::TextAreaWithOneWildcard]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::Box]	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = playScreenViewBase; T1 = const touchgfx::AbstractButton&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = playScreenViewBase; T1 = const touchgfx::AbstractButton&]	3
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::TextAreaWithOneWildcard]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::Box]	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<playScreenPresenter>::~View()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::TextAreaWithOneWildcard>::~MoveAnimator()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::Box>::~MoveAnimator()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<playScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:259:1:virtual playScreenViewBase::~playScreenViewBase()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:305:1:virtual playScreenViewBase::~playScreenViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:269:6:void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	3
+C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:588:6:virtual void playScreenViewBase::handleTickEvent()	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
@@ -50,5 +61,13 @@ C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_s
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	1
-C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:9:1:playScreenViewBase::playScreenViewBase()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = touchgfx::Box]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = touchgfx::TextAreaWithOneWildcard]	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:9:1:playScreenViewBase::playScreenViewBase()	33
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::TextAreaWithOneWildcard]	6
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::TextAreaWithOneWildcard]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:131:10:void touchgfx::MoveAnimator<T>::startMoveAnimation(int16_t, int16_t, uint16_t, touchgfx::EasingEquation, touchgfx::EasingEquation) [with T = touchgfx::TextAreaWithOneWildcard]	3
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::Box]	6
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:131:10:void touchgfx::MoveAnimator<T>::startMoveAnimation(int16_t, int16_t, uint16_t, touchgfx::EasingEquation, touchgfx::EasingEquation) [with T = touchgfx::Box]	3
+C:/TouchGFXProjects/game2048T1/TouchGFX/generated/gui_generated/src/playscreen_screen/playScreenViewBase.cpp:315:6:void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	7

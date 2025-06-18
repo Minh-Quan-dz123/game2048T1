@@ -48,6 +48,8 @@
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_small_round_inactive.o"
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_small_rounded_active.o"
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_small_rounded_pressed.o"
+"./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_tiny_round_active.o"
+"./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_tiny_round_pressed.o"
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_small_round_active.o"
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.o"
 "./Application/User/generated/playScreenViewBase.o"
