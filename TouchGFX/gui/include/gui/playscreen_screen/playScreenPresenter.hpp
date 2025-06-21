@@ -27,6 +27,8 @@ public:
 
     virtual ~playScreenPresenter() {}
 
+    void saveHighestScore(uint32_t score);// lưu điểm
+
 
 private:
     playScreenPresenter();

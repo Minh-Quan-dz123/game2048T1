@@ -15,7 +15,11 @@ void homeScreenView::tearDownScreen()
     homeScreenViewBase::tearDownScreen();
 }
 
-void homeScreenView::updateHighestScore()
-{
 
+
+void homeScreenView::getHighestScore()
+{
+	uint32_t x = presenter->getHighestScore();
+	Unicode::snprintf(highestScoreTextBuffer, 16 , "%u", x);
+	highestScoreText.invalidate();
 }

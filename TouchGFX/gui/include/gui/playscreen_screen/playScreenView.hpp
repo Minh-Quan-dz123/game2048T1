@@ -15,6 +15,7 @@ public:
     virtual void xuLyLuoi(); // gọi hàm theo chu kỳ từ giao TouchGFX Designer
     virtual void khoitaogame();// khởi tạo game
     virtual void tinhDiem();// khi kết thúc game
+
 protected:
     // thêm các hàm và biến
     uint32_t grid[4][4];// dữ liệu các box
@@ -35,8 +36,6 @@ protected:
     void endGame(); // 5 end game
     void updateHighestScore(); // 6: kết thúc thì lưu điểm cao nhất
     // end
-
-    Model* model;     // giao tiếp với Model
 
 };
 

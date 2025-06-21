@@ -6,3 +6,4 @@ C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/homescreen_screen/homeScreenView
 ../../TouchGFX/gui/include/gui/homescreen_screen/homeScreenView.hpp:11:13:virtual homeScreenView::~homeScreenView()	1
 C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/homescreen_screen/homeScreenView.cpp:3:1:homeScreenView::homeScreenView()	1
 C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/homescreen_screen/homeScreenView.cpp:8:6:virtual void homeScreenView::setupScreen()	1
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/homescreen_screen/homeScreenView.cpp:20:6:virtual void homeScreenView::getHighestScore()	1

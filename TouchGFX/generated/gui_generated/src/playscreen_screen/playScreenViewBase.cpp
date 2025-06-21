@@ -347,7 +347,11 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When CONTINUEbutton clicked hide endContainer
         //Hide endContainer
         endContainer.setVisible(false);
-        endContainer.invalidate();
+        endContainer.invalidate();
+        //CONTINUEbuttonClick
+        //When CONTINUEbutton clicked call virtual function
+        //Call khoitaogame
+        khoitaogame();
     }
     if (&src == &ENDbutton)
     {

@@ -89,10 +89,10 @@ void homeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //Show highestScorecontainer
         highestScorecontainer.setVisible(true);
         highestScorecontainer.invalidate();
-        //Interaction1
+        //updateDiem
         //When highestScoreButton clicked call virtual function
-        //Call updateHighestScore
-        updateHighestScore();
+        //Call getHighestScore
+        getHighestScore();
     }
     if (&src == &XbuttonWithLabel1)
     {

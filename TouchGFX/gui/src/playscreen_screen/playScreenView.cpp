@@ -7,6 +7,8 @@
 #include "task.h"
 
 
+
+
 using namespace std;
 
 extern "C"
@@ -30,9 +32,13 @@ void playScreenView::tearDownScreen()
 }
 
 // code
-void playScreenView::tinhDiem() // 0 khi người chơi bấm yes end game
+void playScreenView::tinhDiem() // 0 khi người chơi bấm yesButton trong want end game
 {
 	batXuLyLuoi=2;
+	for(int i=0;i<4;i++)
+	{
+		for(int j=0;j<4;j++) score=max(score,grid[i][j]);
+	}
 	updateHighestScore(); // b: lưu điểm cao nhất
 }
 
@@ -85,14 +91,16 @@ void playScreenView::xuLyLuoi() // 2: nghe trạng thái của joystick theo đ
 		}
 		oldSta = newSta;// gán lại
 	}
-	else if(batXuLyLuoi == 2)// nếu kết thúc
+
+	else if(batXuLyLuoi == 2)// nếu kết thúc thì batXuLyLuoi == 0
 	{
+		batXuLyLuoi=0;
 		endGame();
 	}
 
 }
 
-// code thao tác
+// 3: code thao tác
 void playScreenView::moveRight()
 {
 	// ví dụ về move
@@ -244,7 +252,7 @@ void playScreenView::moveDown()
 			}
 }
 
-// xử lý logic thêm box mới
+// 4: xử lý logic thêm box mới
 void playScreenView::addRamdomBox()
 {
 	// Mảng lưu các vị trí có giá trị 0
@@ -318,7 +326,7 @@ void playScreenView::addRamdomBox()
 
 }
 
-// update giao diện
+// 5: update giao diện
 void playScreenView::updateGiaoDien()
 {
 	Unicode::snprintf(textArea11Buffer, 10 , "%u", grid[0][0]);
@@ -370,9 +378,15 @@ void playScreenView::updateGiaoDien()
 	textArea44.invalidate();
 }
 
+// 6: endGame
 void playScreenView::endGame() // endGame khi thua
 {
+	batXuLyLuoi=0;
 	endContainer.setVisible(true);// a: hiện container kết thúc
+	for(int i=0;i<4;i++)// tính điểm max
+	{
+		for(int j=0;j<4;j++) score=max(score,grid[i][j]);
+	}
 	updateHighestScore(); // b: lưu điểm cao nhất
 	Unicode::snprintf(YourScoreText_ISBuffer, 10 , "%u", score); // c: hiển thị điểm của người chơi
 
@@ -380,10 +394,9 @@ void playScreenView::endGame() // endGame khi thua
 	endContainer.invalidate();
 }
 
-void playScreenView::updateHighestScore()
+void playScreenView::updateHighestScore() // gọi tới presenter
 {
-	if (  score > ( model->getHighestScore() )  )  // lấy điểm ra để so sánh
-		{
-	        model->luuHighestScore(score); // gọi xuống model để lưu điểm
-	    }
+		presenter->saveHighestScore(score);
 }
+
+

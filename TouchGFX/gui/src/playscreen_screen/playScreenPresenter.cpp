@@ -17,4 +17,12 @@ void playScreenPresenter::deactivate()
 
 }
 
+void playScreenPresenter::saveHighestScore(uint32_t score)// lưu điểm
+{
+	if(score > (model->getHighestScore()))
+	{
+		model->luuHighestScore(score);
+	}
+}
+
 

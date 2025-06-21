@@ -27,6 +27,9 @@ public:
 
     virtual ~homeScreenPresenter() {}
 
+    // thêm hàm lấy điểm cao nhất
+    uint32_t getHighestScore() ;
+
 private:
     homeScreenPresenter();
 

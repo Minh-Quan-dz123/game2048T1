@@ -16,3 +16,8 @@ void homeScreenPresenter::deactivate()
 {
 
 }
+
+uint32_t homeScreenPresenter::getHighestScore()
+{
+	return model->getHighestScore();
+}

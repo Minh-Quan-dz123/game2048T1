@@ -14,15 +14,9 @@ public:
         modelListener = listener;
     }
 
-    void luuHighestScore(uint32_t highestscore) // lưu điểm cao nhất (từ View->Model)
-    {
-    	highestscore = highestScore;
-    }
-    uint32_t getHighestScore() const // lấy điểm cao nhất (Từ View gọi -> Model -> View
-    {
-    	return highestScore;
-    }
 
+    void luuHighestScore(uint32_t highestscore) ;// lưu điểm cao nhất
+    uint32_t getHighestScore() ;// lấy điểm cao nhất (Từ View gọi ->presenter-> Model -> View
 
 
     void tick();
@@ -30,7 +24,7 @@ protected:
     ModelListener* modelListener;
 
     // biến lưu điểm cao nhất
-    uint32_t highestScore = 0;
+    uint32_t highestScore = 2;
 
 
 };

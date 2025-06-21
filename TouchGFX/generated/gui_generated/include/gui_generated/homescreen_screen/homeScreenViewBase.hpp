@@ -24,7 +24,7 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void updateHighestScore()
+    virtual void getHighestScore()
     {
         // Override and implement this function in homeScreen
     }

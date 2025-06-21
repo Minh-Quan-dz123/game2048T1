@@ -63,7 +63,7 @@
             "X": 45,
             "Y": 17,
             "Width": 151,
-            "Height": 20,
+            "Height": 24,
             "TextId": "__SingleUse_WZ19",
             "TextRotation": "0",
             "Color": {
@@ -119,7 +119,7 @@
                 "X": 22,
                 "Y": 5,
                 "Width": 171,
-                "Height": 20,
+                "Height": 24,
                 "TextId": "__SingleUse_P9WK",
                 "TextRotation": "0",
                 "AutoSize": true
@@ -178,14 +178,14 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "updateDiem",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "highestScoreButton"
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "updateHighestScore"
+              "FunctionName": "getHighestScore"
             }
           }
         ]
@@ -1567,6 +1567,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "tinhDiem"
+            }
+          },
+          {
+            "InteractionName": "CONTINUEbuttonClick",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "CONTINUEbutton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "khoitaogame"
             }
           }
         ]
