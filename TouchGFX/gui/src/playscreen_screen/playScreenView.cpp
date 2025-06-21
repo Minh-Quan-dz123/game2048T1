@@ -2,6 +2,11 @@
 #include <cstring>
 #include <cstdlib>
 #include "stm32f4xx_hal.h"
+#include <random>
+#include "FreeRTOS.h"
+#include "task.h"
+
+
 using namespace std;
 
 extern "C"
@@ -25,10 +30,10 @@ void playScreenView::tearDownScreen()
 }
 
 // code
-void playScreenView::tinhDiem() // 0 khi người chơi bấm end game
+void playScreenView::tinhDiem() // 0 khi người chơi bấm yes end game
 {
 	batXuLyLuoi=2;
-	endGame();
+	updateHighestScore(); // b: lưu điểm cao nhất
 }
 
 void playScreenView::khoitaogame() // 1: khi bấm STARTbutton
@@ -77,8 +82,8 @@ void playScreenView::xuLyLuoi() // 2: nghe trạng thái của joystick theo đ
 			addRamdomBox();
 			updateGiaoDien();
 
-			oldSta = newSta;// gán lại
 		}
+		oldSta = newSta;// gán lại
 	}
 	else if(batXuLyLuoi == 2)// nếu kết thúc
 	{
@@ -267,19 +272,11 @@ void playScreenView::addRamdomBox()
 	    	 return;
 	    }
 
-	    // gây lỗi 1
-	    static bool seeded = false;
-	    if (!seeded)
-	    {
-	        srand(HAL_GetTick()); // tạo rand
-	        seeded = true;
-	    }
+	    // Lấy 1 vị trí ngẫu nhiên từ danh sách ô trống(sinh số ngẫu nhiên)
+	    static mt19937 gen(xTaskGetTickCount()); // xTaskGetTickCount : thời gian chạy của hệ thống
+	    uniform_int_distribution<> dis(0, zeroCount - 1);
 
-
-	    // gây lỗi 2
-	    // Lấy 1 vị trí ngẫu nhiên từ danh sách ô trống
-	    int randomIndex = rand() % zeroCount;
-	    if(randomIndex < 0) randomIndex = -randomIndex;
+	    int randomIndex = dis(gen);
 	    int randX = viTri0[randomIndex][0];
 	    int randY = viTri0[randomIndex][1];
 
@@ -290,21 +287,28 @@ void playScreenView::addRamdomBox()
 	    if (zeroCount == 1)
 	    {
 	    	uint8_t set=0;
-	    	if(randX + 1 < 4) // nhìn bên phải
+	    	while(set == 0)
 	    	{
-	    		if(grid[randX+1][randY] == 2) set ++;
-	    		else if(randX - 1 >= 0) // nhìn bên trái
+	    		if(randX+1<4)// phải
 	    		{
-	    			if(grid[randX - 1][randY] == 2) set++;
-	    			else if(randY + 1 < 4)// nhìn xuống
-	    			{
-	    				if(grid[randX][randY + 1] == 2) set++;
-	    				else if(randY - 1 >= 0) // nhìn lên
-	    				{
-	    					if(grid[randX][randY - 1] == 2) set ++;
-	    				}
-	    			}
+	    			if(grid[randX+1][randY] == 2) {set ++; break;}
 	    		}
+
+	    		if(randX-1>-1)// trái
+	    		{
+	    			if(grid[randX-1][randY] == 2) {set ++; break;}
+	    		}
+
+	    		if(randY+1<4)// duoi
+	    		{
+	    			if(grid[randX][randY+1] == 2) {set ++; break;}
+	    		}
+
+	    		if(randY-1>-1)// trái
+	    		{
+	    			if(grid[randX][randY-1] == 2) {set ++; break;}
+	    		}
+
 	    	}
 	    	if(set == 0) // tức là không thể đi được nữa
 	    	{
@@ -366,7 +370,7 @@ void playScreenView::updateGiaoDien()
 	textArea44.invalidate();
 }
 
-void playScreenView::endGame()
+void playScreenView::endGame() // endGame khi thua
 {
 	endContainer.setVisible(true);// a: hiện container kết thúc
 	updateHighestScore(); // b: lưu điểm cao nhất

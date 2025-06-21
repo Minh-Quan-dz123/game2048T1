@@ -8,7 +8,7 @@
 
 playScreenViewBase::playScreenViewBase() :
     buttonCallback(this, &playScreenViewBase::buttonCallbackHandler),
-    frameCountXuLuLuoiInterval(0)
+    frameCountXuLyLuoiInterval(0)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -563,13 +563,13 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
 
 void playScreenViewBase::handleTickEvent()
 {
-    frameCountXuLuLuoiInterval++;
-    if(frameCountXuLuLuoiInterval == TICK_XULULUOI_INTERVAL)
+    frameCountXuLyLuoiInterval++;
+    if(frameCountXuLyLuoiInterval == TICK_XULYLUOI_INTERVAL)
     {
-        //xuLuLuoi
+        //xuLyLuoi
         //When every N tick call virtual function
         //Call xuLyLuoi
         xuLyLuoi();
-        frameCountXuLuLuoiInterval = 0;
+        frameCountXuLyLuoiInterval = 0;
     }
 }

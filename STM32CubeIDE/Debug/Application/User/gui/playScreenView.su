@@ -1,18 +1,20 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:22:6:virtual void playScreenView::tearDownScreen()	0	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:27:6:virtual void playScreenView::tearDownScreen()	0	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:33:6:virtual void playScreenView::tinhDiem()	0	static
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:11:13:playScreenView::~playScreenView()	8	static
 ../../TouchGFX/gui/include/gui/playscreen_screen/playScreenView.hpp:11:13:virtual playScreenView::~playScreenView()	8	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:12:1:playScreenView::playScreenView()	8	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:91:6:void playScreenView::moveRight()	40	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:135:6:void playScreenView::moveLeft()	40	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:170:6:void playScreenView::moveUp()	40	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:206:6:void playScreenView::moveDown()	40	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:243:6:void playScreenView::addRamdomBox()	152	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:17:6:virtual void playScreenView::setupScreen()	0	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:315:6:void playScreenView::updateGiaoDien()	16	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:39:6:void playScreenView::batDauGame()	8	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:34:6:virtual void playScreenView::khoitaogame()	0	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:366:6:void playScreenView::endGame()	8	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:28:6:virtual void playScreenView::tinhDiem()	0	static
-C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:55:6:virtual void playScreenView::xuLyLuoi()	16	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:17:1:playScreenView::playScreenView()	8	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:96:6:void playScreenView::moveRight()	40	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:140:6:void playScreenView::moveLeft()	40	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:175:6:void playScreenView::moveUp()	40	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:211:6:void playScreenView::moveDown()	40	static
+C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/random.tcc:397:5:void std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>::_M_gen_rand() [with _UIntType = unsigned int; unsigned int __w = 32; unsigned int __n = 624; unsigned int __m = 397; unsigned int __r = 31; _UIntType __a = 2567483615; unsigned int __u = 11; _UIntType __d = 4294967295; unsigned int __s = 7; _UIntType __b = 2636928640; unsigned int __t = 15; _UIntType __c = 4022730752; unsigned int __l = 18; _UIntType __f = 1812433253]	12	static
+C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/random.tcc:453:5:std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>::result_type std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>::operator()() [with _UIntType = unsigned int; unsigned int __w = 32; unsigned int __n = 624; unsigned int __m = 397; unsigned int __r = 31; _UIntType __a = 2567483615; unsigned int __u = 11; _UIntType __d = 4294967295; unsigned int __s = 7; _UIntType __b = 2636928640; unsigned int __t = 15; _UIntType __c = 4022730752; unsigned int __l = 18; _UIntType __f = 1812433253]	8	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:248:6:void playScreenView::addRamdomBox()	152	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:22:6:virtual void playScreenView::setupScreen()	0	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:322:6:void playScreenView::updateGiaoDien()	16	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:44:6:void playScreenView::batDauGame()	8	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:39:6:virtual void playScreenView::khoitaogame()	0	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:373:6:void playScreenView::endGame()	8	static
+C:/TouchGFXProjects/game2048T1/TouchGFX/gui/src/playscreen_screen/playScreenView.cpp:60:6:virtual void playScreenView::xuLyLuoi()	16	static

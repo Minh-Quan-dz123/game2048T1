@@ -1537,7 +1537,7 @@
             }
           },
           {
-            "InteractionName": "xuLuLuoi",
+            "InteractionName": "xuLyLuoi",
             "Trigger": {
               "Type": "TriggerOnEveryTick",
               "TickCount": 2
@@ -1556,15 +1556,6 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "khoitaogame"
-            }
-          },
-          {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerNone"
-            },
-            "Action": {
-              "Type": "ActionNone"
             }
           },
           {

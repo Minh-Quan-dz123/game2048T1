@@ -151,8 +151,8 @@ private:
     /*
      * Tick Counter Declarations
      */
-    static const uint32_t TICK_XULULUOI_INTERVAL = 2;
-    uint32_t frameCountXuLuLuoiInterval;
+    static const uint32_t TICK_XULYLUOI_INTERVAL = 2;
+    uint32_t frameCountXuLyLuoiInterval;
 
 };
 
