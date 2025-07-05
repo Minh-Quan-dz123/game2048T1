@@ -19,6 +19,7 @@ public:
 protected:
     // thêm các hàm và biến
     uint32_t grid[4][4];// dữ liệu các box
+    uint32_t gan[4][4];// dữ liệu để tương tác với grid
     uint32_t score = 0; // điểm hiện tại
     uint8_t newSta = 0; //
     uint8_t oldSta = 0;
@@ -35,7 +36,39 @@ protected:
     void updateGiaoDien(); // 4: update giao diện
     void endGame(); // 5 end game
     void updateHighestScore(); // 6: kết thúc thì lưu điểm cao nhất
-    // end
+
+    // update versiom2.1 -- hiệu ứng --
+    void addMoveHinh(int x1,int y1, int x2,int y2);
+    void startX_RightMoveHinh(int i);
+    void startX_LeftMoveHinh(int i);
+    void startY_UpMoveHinh(int i);
+    void startY_DownMoveHinh(int i);
+
+    // nâng cấp version2.1; tạo ánh xạ i,j-> box_i_j;
+    touchgfx::Box *boxij[4][4];
+    touchgfx::TextAreaWithOneWildcard *textAreaij[4][4];
+    touchgfx::MoveAnimator< touchgfx::Container > *containerij[4][4];
+    touchgfx::Unicode::UnicodeChar* textBufferij[4][4];
+
+    int vtX0 = -1, vtY0 = -1; // vị trí xuất hiện ô ramdom trước đó;
+
+    // tạo callback cho animation
+
+    struct dichuyen{
+    	int X1,Y1,X2,Y2;
+    };
+    dichuyen Toa[4][4];
+
+    touchgfx::Callback<playScreenView, const touchgfx::MoveAnimator<touchgfx::Container>&> conTroCallBackX_Right; // con trỏ di chuyển chiều ngang
+    touchgfx::Callback<playScreenView, const touchgfx::MoveAnimator<touchgfx::Container>&> conTroCallBackY_Up; // con trỏ đi theo chiều dọc
+    touchgfx::Callback<playScreenView, const touchgfx::MoveAnimator<touchgfx::Container>&> conTroCallBackX_Left; // con trỏ di chuyển chiều ngang
+    touchgfx::Callback<playScreenView, const touchgfx::MoveAnimator<touchgfx::Container>&> conTroCallBackY_Down; // con trỏ đi theo chiều dọc
+
+    void callbackHandlerX_Right(const touchgfx::MoveAnimator<touchgfx::Container>& cont);
+    void callbackHandlerY_Up(const touchgfx::MoveAnimator<touchgfx::Container>& cont);
+    void callbackHandlerX_Left(const touchgfx::MoveAnimator<touchgfx::Container>& cont);
+    void callbackHandlerY_Down(const touchgfx::MoveAnimator<touchgfx::Container>& cont);
+
 
 };
 

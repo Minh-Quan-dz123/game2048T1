@@ -238,516 +238,620 @@
                 "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_240x240_puzzle.png"
               },
               {
-                "Type": "Box",
-                "Name": "box11",
+                "Type": "Container",
+                "Name": "container11",
                 "Width": 60,
                 "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box11",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea11",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_R5B7",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_10X6",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "Box",
-                "Name": "box21",
-                "X": 60,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box31",
-                "X": 120,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box41",
-                "X": 180,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box12",
+                "Type": "Container",
+                "Name": "container12",
                 "Y": 60,
                 "Width": 60,
                 "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box12",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea12",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_NEYM",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_71XW",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "Box",
-                "Name": "box22",
-                "X": 60,
-                "Y": 60,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box32",
-                "X": 120,
-                "Y": 60,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box42",
-                "X": 180,
-                "Y": 60,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box13",
+                "Type": "Container",
+                "Name": "container13",
                 "Y": 120,
                 "Width": 60,
                 "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box13",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea13",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_K59M",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_4F6K",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "Box",
-                "Name": "box23",
-                "X": 60,
-                "Y": 120,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box33",
-                "X": 120,
-                "Y": 120,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box43",
-                "X": 180,
-                "Y": 120,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box14",
+                "Type": "Container",
+                "Name": "container14",
                 "Y": 180,
                 "Width": 60,
                 "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box14",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea14",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_X113",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_HWW2",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "Box",
-                "Name": "box24",
-                "X": 60,
-                "Y": 180,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box34",
-                "X": 120,
-                "Y": 180,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "box44",
-                "X": 180,
-                "Y": 180,
-                "Width": 60,
-                "Height": 60,
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textArea11",
-                "Width": 60,
-                "Height": 60,
-                "TextId": "__SingleUse_R5B7",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_10X6",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textArea12",
-                "Y": 60,
-                "Width": 60,
-                "Height": 60,
-                "TextId": "__SingleUse_NEYM",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_71XW",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textArea13",
-                "Y": 120,
-                "Width": 60,
-                "Height": 60,
-                "TextId": "__SingleUse_K59M",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_4F6K",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textArea14",
-                "Y": 180,
-                "Width": 60,
-                "Height": 60,
-                "TextId": "__SingleUse_X113",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_HWW2",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textArea21",
+                "Type": "Container",
+                "Name": "container21",
                 "X": 60,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_LU3A",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_2MJT",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box21",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea21",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_LU3A",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_2MJT",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea22",
+                "Type": "Container",
+                "Name": "container22",
                 "X": 60,
                 "Y": 60,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_3GGA",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_BIQA",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box22",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea22",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_3GGA",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_BIQA",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea23",
+                "Type": "Container",
+                "Name": "container23",
                 "X": 60,
                 "Y": 120,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_BWZB",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_XO6P",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box23",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea23",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_BWZB",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_XO6P",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea24",
+                "Type": "Container",
+                "Name": "container24",
                 "X": 60,
                 "Y": 180,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_4ENB",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_3BNR",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box24",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea24",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_4ENB",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_3BNR",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea31",
+                "Type": "Container",
+                "Name": "container31",
                 "X": 120,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_CWQ8",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_XTXL",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box31",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea31",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_CWQ8",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_XTXL",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea32",
+                "Type": "Container",
+                "Name": "container32",
                 "X": 120,
                 "Y": 60,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_3D3H",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_B9VL",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box32",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea32",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_3D3H",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_B9VL",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea33",
+                "Type": "Container",
+                "Name": "container33",
                 "X": 120,
                 "Y": 120,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_1O8L",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_7K4R",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box33",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea33",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_1O8L",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_7K4R",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea34",
+                "Type": "Container",
+                "Name": "container34",
                 "X": 120,
                 "Y": 180,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_I591",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_S7F5",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box34",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea34",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_I591",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_S7F5",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea41",
+                "Type": "Container",
+                "Name": "container41",
                 "X": 180,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_XIHZ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_I67B",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box41",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea41",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_XIHZ",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_I67B",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea42",
+                "Type": "Container",
+                "Name": "container42",
                 "X": 180,
                 "Y": 60,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_CR7K",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_H280",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box42",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea42",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_CR7K",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_H280",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea43",
+                "Type": "Container",
+                "Name": "container43",
                 "X": 180,
                 "Y": 120,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_EUXA",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_GKPS",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box43",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea43",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_EUXA",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_GKPS",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               },
               {
-                "Type": "TextArea",
-                "Name": "textArea44",
+                "Type": "Container",
+                "Name": "container44",
                 "X": 180,
                 "Y": 180,
                 "Width": 60,
                 "Height": 60,
-                "TextId": "__SingleUse_S5H3",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 66,
-                  "Green": 2,
-                  "Blue": 2
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_V6IM",
-                  "UseBuffer": true,
-                  "BufferSize": 10
-                }
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box44",
+                    "Width": 60,
+                    "Height": 60,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea44",
+                    "Width": 60,
+                    "Height": 60,
+                    "TextId": "__SingleUse_S5H3",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 66,
+                      "Green": 2,
+                      "Blue": 2
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_V6IM",
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -1018,9 +1122,8 @@
               "Type": "ActionMove",
               "Easing": "Linear",
               "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea11"
+              "Duration": 9,
+              "ActionComponent": "container11"
             }
           },
           {
@@ -1035,8 +1138,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea12"
+              "ActionComponent": "container12"
             }
           },
           {
@@ -1051,8 +1153,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea13"
+              "ActionComponent": "container13"
             }
           },
           {
@@ -1067,8 +1168,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea14"
+              "ActionComponent": "container14"
             }
           },
           {
@@ -1083,8 +1183,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea21"
+              "ActionComponent": "container21"
             }
           },
           {
@@ -1100,8 +1199,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea22"
+              "ActionComponent": "container22"
             }
           },
           {
@@ -1117,8 +1215,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea23"
+              "ActionComponent": "container23"
             }
           },
           {
@@ -1134,8 +1231,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea24"
+              "ActionComponent": "container24"
             }
           },
           {
@@ -1150,8 +1246,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea31"
+              "ActionComponent": "container31"
             }
           },
           {
@@ -1167,8 +1262,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea32"
+              "ActionComponent": "container32"
             }
           },
           {
@@ -1184,8 +1278,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea33"
+              "ActionComponent": "container33"
             }
           },
           {
@@ -1201,8 +1294,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea34"
+              "ActionComponent": "container34"
             }
           },
           {
@@ -1217,8 +1309,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea41"
+              "ActionComponent": "container41"
             }
           },
           {
@@ -1234,8 +1325,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea42"
+              "ActionComponent": "container42"
             }
           },
           {
@@ -1251,8 +1341,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea43"
+              "ActionComponent": "container43"
             }
           },
           {
@@ -1268,272 +1357,7 @@
               "Easing": "Linear",
               "EasingOption": "In",
               "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "textArea44"
-            }
-          },
-          {
-            "InteractionName": "startBox11",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box11"
-            }
-          },
-          {
-            "InteractionName": "startBox21",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 60,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box21"
-            }
-          },
-          {
-            "InteractionName": "startBox31",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 120,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box31"
-            }
-          },
-          {
-            "InteractionName": "startBox41",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 180,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box41"
-            }
-          },
-          {
-            "InteractionName": "startBox12",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "Y": 60,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box12"
-            }
-          },
-          {
-            "InteractionName": "startBox22",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 60,
-              "Y": 60,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box22"
-            }
-          },
-          {
-            "InteractionName": "startBox32",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 120,
-              "Y": 60,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box32"
-            }
-          },
-          {
-            "InteractionName": "startBox42",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 180,
-              "Y": 60,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box42"
-            }
-          },
-          {
-            "InteractionName": "startBox13",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "Y": 120,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box13"
-            }
-          },
-          {
-            "InteractionName": "startBox23",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 60,
-              "Y": 120,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box23"
-            }
-          },
-          {
-            "InteractionName": "startBox33",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 120,
-              "Y": 120,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box33"
-            }
-          },
-          {
-            "InteractionName": "startBox43",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 180,
-              "Y": 120,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box43"
-            }
-          },
-          {
-            "InteractionName": "startBox14",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "Y": 180,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box14"
-            }
-          },
-          {
-            "InteractionName": "startBox24",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 60,
-              "Y": 180,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box24"
-            }
-          },
-          {
-            "InteractionName": "startBox34",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 120,
-              "Y": 180,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box34"
-            }
-          },
-          {
-            "InteractionName": "startBox44",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STARTbutton"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 180,
-              "Y": 180,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 10,
-              "AnimationDelay": 10,
-              "ActionComponent": "box44"
+              "ActionComponent": "container44"
             }
           },
           {

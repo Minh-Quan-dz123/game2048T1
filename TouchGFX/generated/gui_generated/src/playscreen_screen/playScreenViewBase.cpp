@@ -31,69 +31,10 @@ playScreenViewBase::playScreenViewBase() :
     image4.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_BACKGROUNDS_240X240_PUZZLE_ID));
     container1.add(image4);
 
+    container11.setPosition(0, 0, 60, 60);
     box11.setPosition(0, 0, 60, 60);
     box11.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box11);
-
-    box21.setPosition(60, 0, 60, 60);
-    box21.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box21);
-
-    box31.setPosition(120, 0, 60, 60);
-    box31.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box31);
-
-    box41.setPosition(180, 0, 60, 60);
-    box41.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box41);
-
-    box12.setPosition(0, 60, 60, 60);
-    box12.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box12);
-
-    box22.setPosition(60, 60, 60, 60);
-    box22.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box22);
-
-    box32.setPosition(120, 60, 60, 60);
-    box32.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box32);
-
-    box42.setPosition(180, 60, 60, 60);
-    box42.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box42);
-
-    box13.setPosition(0, 120, 60, 60);
-    box13.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box13);
-
-    box23.setPosition(60, 120, 60, 60);
-    box23.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box23);
-
-    box33.setPosition(120, 120, 60, 60);
-    box33.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box33);
-
-    box43.setPosition(180, 120, 60, 60);
-    box43.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box43);
-
-    box14.setPosition(0, 180, 60, 60);
-    box14.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box14);
-
-    box24.setPosition(60, 180, 60, 60);
-    box24.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box24);
-
-    box34.setPosition(120, 180, 60, 60);
-    box34.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box34);
-
-    box44.setPosition(180, 180, 60, 60);
-    box44.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container1.add(box44);
+    container11.add(box11);
 
     textArea11.setPosition(0, 0, 60, 60);
     textArea11.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
@@ -101,127 +42,234 @@ playScreenViewBase::playScreenViewBase() :
     Unicode::snprintf(textArea11Buffer, TEXTAREA11_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_10X6).getText());
     textArea11.setWildcard(textArea11Buffer);
     textArea11.setTypedText(touchgfx::TypedText(T___SINGLEUSE_R5B7));
-    container1.add(textArea11);
+    container11.add(textArea11);
 
-    textArea12.setPosition(0, 60, 60, 60);
+    container1.add(container11);
+
+    container12.setPosition(0, 60, 60, 60);
+    box12.setPosition(0, 0, 60, 60);
+    box12.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container12.add(box12);
+
+    textArea12.setPosition(0, 0, 60, 60);
     textArea12.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea12.setLinespacing(0);
     Unicode::snprintf(textArea12Buffer, TEXTAREA12_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_71XW).getText());
     textArea12.setWildcard(textArea12Buffer);
     textArea12.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NEYM));
-    container1.add(textArea12);
+    container12.add(textArea12);
 
-    textArea13.setPosition(0, 120, 60, 60);
+    container1.add(container12);
+
+    container13.setPosition(0, 120, 60, 60);
+    box13.setPosition(0, 0, 60, 60);
+    box13.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container13.add(box13);
+
+    textArea13.setPosition(0, 0, 60, 60);
     textArea13.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea13.setLinespacing(0);
     Unicode::snprintf(textArea13Buffer, TEXTAREA13_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_4F6K).getText());
     textArea13.setWildcard(textArea13Buffer);
     textArea13.setTypedText(touchgfx::TypedText(T___SINGLEUSE_K59M));
-    container1.add(textArea13);
+    container13.add(textArea13);
 
-    textArea14.setPosition(0, 180, 60, 60);
+    container1.add(container13);
+
+    container14.setPosition(0, 180, 60, 60);
+    box14.setPosition(0, 0, 60, 60);
+    box14.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container14.add(box14);
+
+    textArea14.setPosition(0, 0, 60, 60);
     textArea14.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea14.setLinespacing(0);
     Unicode::snprintf(textArea14Buffer, TEXTAREA14_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_HWW2).getText());
     textArea14.setWildcard(textArea14Buffer);
     textArea14.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X113));
-    container1.add(textArea14);
+    container14.add(textArea14);
 
-    textArea21.setPosition(60, 0, 60, 60);
+    container1.add(container14);
+
+    container21.setPosition(60, 0, 60, 60);
+    box21.setPosition(0, 0, 60, 60);
+    box21.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container21.add(box21);
+
+    textArea21.setPosition(0, 0, 60, 60);
     textArea21.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea21.setLinespacing(0);
     Unicode::snprintf(textArea21Buffer, TEXTAREA21_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2MJT).getText());
     textArea21.setWildcard(textArea21Buffer);
     textArea21.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LU3A));
-    container1.add(textArea21);
+    container21.add(textArea21);
 
-    textArea22.setPosition(60, 60, 60, 60);
+    container1.add(container21);
+
+    container22.setPosition(60, 60, 60, 60);
+    box22.setPosition(0, 0, 60, 60);
+    box22.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container22.add(box22);
+
+    textArea22.setPosition(0, 0, 60, 60);
     textArea22.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea22.setLinespacing(0);
     Unicode::snprintf(textArea22Buffer, TEXTAREA22_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BIQA).getText());
     textArea22.setWildcard(textArea22Buffer);
     textArea22.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3GGA));
-    container1.add(textArea22);
+    container22.add(textArea22);
 
-    textArea23.setPosition(60, 120, 60, 60);
+    container1.add(container22);
+
+    container23.setPosition(60, 120, 60, 60);
+    box23.setPosition(0, 0, 60, 60);
+    box23.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container23.add(box23);
+
+    textArea23.setPosition(0, 0, 60, 60);
     textArea23.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea23.setLinespacing(0);
     Unicode::snprintf(textArea23Buffer, TEXTAREA23_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XO6P).getText());
     textArea23.setWildcard(textArea23Buffer);
     textArea23.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BWZB));
-    container1.add(textArea23);
+    container23.add(textArea23);
 
-    textArea24.setPosition(60, 180, 60, 60);
+    container1.add(container23);
+
+    container24.setPosition(60, 180, 60, 60);
+    box24.setPosition(0, 0, 60, 60);
+    box24.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container24.add(box24);
+
+    textArea24.setPosition(0, 0, 60, 60);
     textArea24.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea24.setLinespacing(0);
     Unicode::snprintf(textArea24Buffer, TEXTAREA24_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3BNR).getText());
     textArea24.setWildcard(textArea24Buffer);
     textArea24.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4ENB));
-    container1.add(textArea24);
+    container24.add(textArea24);
 
-    textArea31.setPosition(120, 0, 60, 60);
+    container1.add(container24);
+
+    container31.setPosition(120, 0, 60, 60);
+    box31.setPosition(0, 0, 60, 60);
+    box31.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container31.add(box31);
+
+    textArea31.setPosition(0, 0, 60, 60);
     textArea31.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea31.setLinespacing(0);
     Unicode::snprintf(textArea31Buffer, TEXTAREA31_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XTXL).getText());
     textArea31.setWildcard(textArea31Buffer);
     textArea31.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CWQ8));
-    container1.add(textArea31);
+    container31.add(textArea31);
 
-    textArea32.setPosition(120, 60, 60, 60);
+    container1.add(container31);
+
+    container32.setPosition(120, 60, 60, 60);
+    box32.setPosition(0, 0, 60, 60);
+    box32.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container32.add(box32);
+
+    textArea32.setPosition(0, 0, 60, 60);
     textArea32.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea32.setLinespacing(0);
     Unicode::snprintf(textArea32Buffer, TEXTAREA32_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_B9VL).getText());
     textArea32.setWildcard(textArea32Buffer);
     textArea32.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3D3H));
-    container1.add(textArea32);
+    container32.add(textArea32);
 
-    textArea33.setPosition(120, 120, 60, 60);
+    container1.add(container32);
+
+    container33.setPosition(120, 120, 60, 60);
+    box33.setPosition(0, 0, 60, 60);
+    box33.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container33.add(box33);
+
+    textArea33.setPosition(0, 0, 60, 60);
     textArea33.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea33.setLinespacing(0);
     Unicode::snprintf(textArea33Buffer, TEXTAREA33_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7K4R).getText());
     textArea33.setWildcard(textArea33Buffer);
     textArea33.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1O8L));
-    container1.add(textArea33);
+    container33.add(textArea33);
 
-    textArea34.setPosition(120, 180, 60, 60);
+    container1.add(container33);
+
+    container34.setPosition(120, 180, 60, 60);
+    box34.setPosition(0, 0, 60, 60);
+    box34.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container34.add(box34);
+
+    textArea34.setPosition(0, 0, 60, 60);
     textArea34.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea34.setLinespacing(0);
     Unicode::snprintf(textArea34Buffer, TEXTAREA34_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_S7F5).getText());
     textArea34.setWildcard(textArea34Buffer);
     textArea34.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I591));
-    container1.add(textArea34);
+    container34.add(textArea34);
 
-    textArea41.setPosition(180, 0, 60, 60);
+    container1.add(container34);
+
+    container41.setPosition(180, 0, 60, 60);
+    box41.setPosition(0, 0, 60, 60);
+    box41.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container41.add(box41);
+
+    textArea41.setPosition(0, 0, 60, 60);
     textArea41.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea41.setLinespacing(0);
     Unicode::snprintf(textArea41Buffer, TEXTAREA41_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_I67B).getText());
     textArea41.setWildcard(textArea41Buffer);
     textArea41.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XIHZ));
-    container1.add(textArea41);
+    container41.add(textArea41);
 
-    textArea42.setPosition(180, 60, 60, 60);
+    container1.add(container41);
+
+    container42.setPosition(180, 60, 60, 60);
+    box42.setPosition(0, 0, 60, 60);
+    box42.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container42.add(box42);
+
+    textArea42.setPosition(0, 0, 60, 60);
     textArea42.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea42.setLinespacing(0);
     Unicode::snprintf(textArea42Buffer, TEXTAREA42_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H280).getText());
     textArea42.setWildcard(textArea42Buffer);
     textArea42.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CR7K));
-    container1.add(textArea42);
+    container42.add(textArea42);
 
-    textArea43.setPosition(180, 120, 60, 60);
+    container1.add(container42);
+
+    container43.setPosition(180, 120, 60, 60);
+    box43.setPosition(0, 0, 60, 60);
+    box43.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container43.add(box43);
+
+    textArea43.setPosition(0, 0, 60, 60);
     textArea43.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea43.setLinespacing(0);
     Unicode::snprintf(textArea43Buffer, TEXTAREA43_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GKPS).getText());
     textArea43.setWildcard(textArea43Buffer);
     textArea43.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EUXA));
-    container1.add(textArea43);
+    container43.add(textArea43);
 
-    textArea44.setPosition(180, 180, 60, 60);
+    container1.add(container43);
+
+    container44.setPosition(180, 180, 60, 60);
+    box44.setPosition(0, 0, 60, 60);
+    box44.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container44.add(box44);
+
+    textArea44.setPosition(0, 0, 60, 60);
     textArea44.setColor(touchgfx::Color::getColorFromRGB(66, 2, 2));
     textArea44.setLinespacing(0);
     Unicode::snprintf(textArea44Buffer, TEXTAREA44_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V6IM).getText());
     textArea44.setWildcard(textArea44Buffer);
     textArea44.setTypedText(touchgfx::TypedText(T___SINGLEUSE_S5H3));
-    container1.add(textArea44);
+    container44.add(textArea44);
+
+    container1.add(container44);
 
     add(container1);
 
@@ -367,197 +415,85 @@ void playScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
     if (&src == &STARTbutton)
     {
         //startTextArea11
-        //When STARTbutton clicked move textArea11
-        //Move textArea11 to x:0, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        textArea11.clearMoveAnimationEndedAction();
-        textArea11.setMoveAnimationDelay(1);
-        textArea11.startMoveAnimation(0, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container11
+        //Move container11 to x:0, y:0 with LinearIn easing in 9 ms (1 Ticks)
+        container11.clearMoveAnimationEndedAction();
+        container11.startMoveAnimation(0, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea12
-        //When STARTbutton clicked move textArea12
-        //Move textArea12 to x:0, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        textArea12.clearMoveAnimationEndedAction();
-        textArea12.setMoveAnimationDelay(1);
-        textArea12.startMoveAnimation(0, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container12
+        //Move container12 to x:0, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        container12.clearMoveAnimationEndedAction();
+        container12.startMoveAnimation(0, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea13
-        //When STARTbutton clicked move textArea13
-        //Move textArea13 to x:0, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        textArea13.clearMoveAnimationEndedAction();
-        textArea13.setMoveAnimationDelay(1);
-        textArea13.startMoveAnimation(0, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container13
+        //Move container13 to x:0, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        container13.clearMoveAnimationEndedAction();
+        container13.startMoveAnimation(0, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea14
-        //When STARTbutton clicked move textArea14
-        //Move textArea14 to x:0, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        textArea14.clearMoveAnimationEndedAction();
-        textArea14.setMoveAnimationDelay(1);
-        textArea14.startMoveAnimation(0, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container14
+        //Move container14 to x:0, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        container14.clearMoveAnimationEndedAction();
+        container14.startMoveAnimation(0, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea21
-        //When STARTbutton clicked move textArea21
-        //Move textArea21 to x:60, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        textArea21.clearMoveAnimationEndedAction();
-        textArea21.setMoveAnimationDelay(1);
-        textArea21.startMoveAnimation(60, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container21
+        //Move container21 to x:60, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        container21.clearMoveAnimationEndedAction();
+        container21.startMoveAnimation(60, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea22
-        //When STARTbutton clicked move textArea22
-        //Move textArea22 to x:60, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        textArea22.clearMoveAnimationEndedAction();
-        textArea22.setMoveAnimationDelay(1);
-        textArea22.startMoveAnimation(60, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container22
+        //Move container22 to x:60, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        container22.clearMoveAnimationEndedAction();
+        container22.startMoveAnimation(60, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea23
-        //When STARTbutton clicked move textArea23
-        //Move textArea23 to x:60, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        textArea23.clearMoveAnimationEndedAction();
-        textArea23.setMoveAnimationDelay(1);
-        textArea23.startMoveAnimation(60, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container23
+        //Move container23 to x:60, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        container23.clearMoveAnimationEndedAction();
+        container23.startMoveAnimation(60, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea24
-        //When STARTbutton clicked move textArea24
-        //Move textArea24 to x:60, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        textArea24.clearMoveAnimationEndedAction();
-        textArea24.setMoveAnimationDelay(1);
-        textArea24.startMoveAnimation(60, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container24
+        //Move container24 to x:60, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        container24.clearMoveAnimationEndedAction();
+        container24.startMoveAnimation(60, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea31
-        //When STARTbutton clicked move textArea31
-        //Move textArea31 to x:120, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        textArea31.clearMoveAnimationEndedAction();
-        textArea31.setMoveAnimationDelay(1);
-        textArea31.startMoveAnimation(120, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container31
+        //Move container31 to x:120, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        container31.clearMoveAnimationEndedAction();
+        container31.startMoveAnimation(120, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea32
-        //When STARTbutton clicked move textArea32
-        //Move textArea32 to x:120, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        textArea32.clearMoveAnimationEndedAction();
-        textArea32.setMoveAnimationDelay(1);
-        textArea32.startMoveAnimation(120, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container32
+        //Move container32 to x:120, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        container32.clearMoveAnimationEndedAction();
+        container32.startMoveAnimation(120, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea33
-        //When STARTbutton clicked move textArea33
-        //Move textArea33 to x:120, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        textArea33.clearMoveAnimationEndedAction();
-        textArea33.setMoveAnimationDelay(1);
-        textArea33.startMoveAnimation(120, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container33
+        //Move container33 to x:120, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        container33.clearMoveAnimationEndedAction();
+        container33.startMoveAnimation(120, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea34
-        //When STARTbutton clicked move textArea34
-        //Move textArea34 to x:120, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        textArea34.clearMoveAnimationEndedAction();
-        textArea34.setMoveAnimationDelay(1);
-        textArea34.startMoveAnimation(120, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container34
+        //Move container34 to x:120, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        container34.clearMoveAnimationEndedAction();
+        container34.startMoveAnimation(120, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea41
-        //When STARTbutton clicked move textArea41
-        //Move textArea41 to x:180, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        textArea41.clearMoveAnimationEndedAction();
-        textArea41.setMoveAnimationDelay(1);
-        textArea41.startMoveAnimation(180, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container41
+        //Move container41 to x:180, y:0 with LinearIn easing in 10 ms (1 Ticks)
+        container41.clearMoveAnimationEndedAction();
+        container41.startMoveAnimation(180, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea42
-        //When STARTbutton clicked move textArea42
-        //Move textArea42 to x:180, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        textArea42.clearMoveAnimationEndedAction();
-        textArea42.setMoveAnimationDelay(1);
-        textArea42.startMoveAnimation(180, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container42
+        //Move container42 to x:180, y:60 with LinearIn easing in 10 ms (1 Ticks)
+        container42.clearMoveAnimationEndedAction();
+        container42.startMoveAnimation(180, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea43
-        //When STARTbutton clicked move textArea43
-        //Move textArea43 to x:180, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        textArea43.clearMoveAnimationEndedAction();
-        textArea43.setMoveAnimationDelay(1);
-        textArea43.startMoveAnimation(180, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container43
+        //Move container43 to x:180, y:120 with LinearIn easing in 10 ms (1 Ticks)
+        container43.clearMoveAnimationEndedAction();
+        container43.startMoveAnimation(180, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //startTextArea44
-        //When STARTbutton clicked move textArea44
-        //Move textArea44 to x:180, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        textArea44.clearMoveAnimationEndedAction();
-        textArea44.setMoveAnimationDelay(1);
-        textArea44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox11
-        //When STARTbutton clicked move box11
-        //Move box11 to x:0, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        box11.clearMoveAnimationEndedAction();
-        box11.setMoveAnimationDelay(1);
-        box11.startMoveAnimation(0, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox21
-        //When STARTbutton clicked move box21
-        //Move box21 to x:60, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        box21.clearMoveAnimationEndedAction();
-        box21.setMoveAnimationDelay(1);
-        box21.startMoveAnimation(60, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox31
-        //When STARTbutton clicked move box31
-        //Move box31 to x:120, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        box31.clearMoveAnimationEndedAction();
-        box31.setMoveAnimationDelay(1);
-        box31.startMoveAnimation(120, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox41
-        //When STARTbutton clicked move box41
-        //Move box41 to x:180, y:0 with LinearIn easing in 10 ms (1 Ticks)
-        box41.clearMoveAnimationEndedAction();
-        box41.setMoveAnimationDelay(1);
-        box41.startMoveAnimation(180, 0, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox12
-        //When STARTbutton clicked move box12
-        //Move box12 to x:0, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        box12.clearMoveAnimationEndedAction();
-        box12.setMoveAnimationDelay(1);
-        box12.startMoveAnimation(0, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox22
-        //When STARTbutton clicked move box22
-        //Move box22 to x:60, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        box22.clearMoveAnimationEndedAction();
-        box22.setMoveAnimationDelay(1);
-        box22.startMoveAnimation(60, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox32
-        //When STARTbutton clicked move box32
-        //Move box32 to x:120, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        box32.clearMoveAnimationEndedAction();
-        box32.setMoveAnimationDelay(1);
-        box32.startMoveAnimation(120, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox42
-        //When STARTbutton clicked move box42
-        //Move box42 to x:180, y:60 with LinearIn easing in 10 ms (1 Ticks)
-        box42.clearMoveAnimationEndedAction();
-        box42.setMoveAnimationDelay(1);
-        box42.startMoveAnimation(180, 60, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox13
-        //When STARTbutton clicked move box13
-        //Move box13 to x:0, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        box13.clearMoveAnimationEndedAction();
-        box13.setMoveAnimationDelay(1);
-        box13.startMoveAnimation(0, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox23
-        //When STARTbutton clicked move box23
-        //Move box23 to x:60, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        box23.clearMoveAnimationEndedAction();
-        box23.setMoveAnimationDelay(1);
-        box23.startMoveAnimation(60, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox33
-        //When STARTbutton clicked move box33
-        //Move box33 to x:120, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        box33.clearMoveAnimationEndedAction();
-        box33.setMoveAnimationDelay(1);
-        box33.startMoveAnimation(120, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox43
-        //When STARTbutton clicked move box43
-        //Move box43 to x:180, y:120 with LinearIn easing in 10 ms (1 Ticks)
-        box43.clearMoveAnimationEndedAction();
-        box43.setMoveAnimationDelay(1);
-        box43.startMoveAnimation(180, 120, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox14
-        //When STARTbutton clicked move box14
-        //Move box14 to x:0, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        box14.clearMoveAnimationEndedAction();
-        box14.setMoveAnimationDelay(1);
-        box14.startMoveAnimation(0, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox24
-        //When STARTbutton clicked move box24
-        //Move box24 to x:60, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        box24.clearMoveAnimationEndedAction();
-        box24.setMoveAnimationDelay(1);
-        box24.startMoveAnimation(60, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox34
-        //When STARTbutton clicked move box34
-        //Move box34 to x:120, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        box34.clearMoveAnimationEndedAction();
-        box34.setMoveAnimationDelay(1);
-        box34.startMoveAnimation(120, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-        //startBox44
-        //When STARTbutton clicked move box44
-        //Move box44 to x:180, y:180 with LinearIn easing in 10 ms (1 Ticks)
-        box44.clearMoveAnimationEndedAction();
-        box44.setMoveAnimationDelay(1);
-        box44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //When STARTbutton clicked move container44
+        //Move container44 to x:180, y:180 with LinearIn easing in 10 ms (1 Ticks)
+        container44.clearMoveAnimationEndedAction();
+        container44.startMoveAnimation(180, 180, 1, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
         //khoitaoGame
         //When STARTbutton clicked call virtual function
         //Call khoitaogame

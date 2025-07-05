@@ -1105,9 +1105,9 @@ void StartDefaultTask(void *argument)
 	for(;;) // chạy DMS
 	{
 		HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buffer, 2);
-	    osDelay(100);
-	    HAL_ADC_Stop_DMA(&hadc1);
 	    osDelay(20);
+	    HAL_ADC_Stop_DMA(&hadc1);
+	    osDelay(100);
 	}
   /* USER CODE END 5 */
 }
