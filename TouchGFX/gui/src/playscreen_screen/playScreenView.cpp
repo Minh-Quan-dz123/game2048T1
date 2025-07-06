@@ -16,11 +16,11 @@ extern "C"
 	extern volatile uint8_t newStatus;
 }
 
-// thêm khởi tạo các đối tượng callback cho View này
-playScreenView::playScreenView()//:conTroCallBackX_Right(this, &playScreenView::callbackHandlerX_Right),
-								 //conTroCallBackY_Up(this, &playScreenView::callbackHandlerY_Up),
-								 //conTroCallBackX_Left(this, &playScreenView::callbackHandlerX_Left),
-								 //conTroCallBackY_Down(this, &playScreenView::callbackHandlerY_Down)
+//đăng ký callback
+playScreenView::playScreenView():conTroCallBackX_Right(this, &playScreenView::callbackHandlerX_Right),
+								 conTroCallBackY_Up(this, &playScreenView::callbackHandlerY_Up),
+								 conTroCallBackX_Left(this, &playScreenView::callbackHandlerX_Left),
+								 conTroCallBackY_Down(this, &playScreenView::callbackHandlerY_Down)
 {
 
 }
@@ -158,19 +158,24 @@ void playScreenView::xuLyLuoi() // 2: nghe trạng thái của joystick theo đ
 
 		if(newSta != oldSta && newSta != 0) // nếu ng dùng thao tác joystick
 		{
-		    boxij[vtX0][vtY0]->setColor(touchgfx::Color::getColorFromRGB(0,0,0));// gán vị trị ramdom cũ về màu xanh
-		    boxij[vtX0][vtY0]->invalidate();
+		//	if(dichuyenGa == false)
+			//{
+				memset(Toa,-1,sizeof(Toa));// gán Toa == -1
 
-			switch(newSta) // di chuyển
-			{
-				case 1: moveRight(); break; // vừa di chuyển vừa update giao diện rồi
-				case 2: moveLeft(); break;
-				case 3: moveUp(); break;
-				case 4: moveDown(); break;
-			}
-			// xong rồi thì tiếp tục
-			addRamdomBox();
-			updateGiaoDien();
+			    batXuLyLuoi = 3; // giai đoạn Animation
+
+				switch(newSta) // di chuyển
+				{
+					case 1: moveRight(); break; // vừa di chuyển vừa update giao diện rồi
+					case 2: moveLeft(); break;
+					case 3: moveUp(); break;
+					case 4: moveDown(); break;
+
+					// các cv addRamdomBox, batXuLyLuoi để ở trong các hàm Animation
+				}
+			//}
+			//else dichuyenGa = false;// nếu bằng true thì thôi
+
 		}
 		oldSta = newSta;// gán lại
 	}
@@ -198,18 +203,21 @@ void playScreenView::moveRight()
 				if(gan[index][y] == 0)// chưa có gì => gán được
 				{
 					gan[index][y] = grid[x][y];
+					setDiChuyen(x,y,index,y);
 				}
 				else
 				{
 					if(gan[index][y] == grid[x][y]) // có gì rồi nhưng vẫn gán được
 					{
-						gan[index][y] = grid[x][y]*2;
+						gan[index][y] = grid[x][y]*2;  // merge
+						setDiChuyen(x,y,index,y);
 						index--;// giảm đi để không xét vị trí này nữa
 					}
 					else // có gì rồi nhưng không gán được thì bỏ
 					{
 						index--; // vị trí mới chắc chắn là gan[index]=0
 						gan[index][y] = grid[x][y];
+						setDiChuyen(x,y,index,y);
 					}
 				}
 			}
@@ -217,8 +225,17 @@ void playScreenView::moveRight()
 		// gán kết quả
 		for(int i = 0; i<4; i++)	grid[i][y] = gan[i][y];
 	}
-
-
+	if(countToa != 0)
+	{
+	    boxij[vtX0][vtY0]->setColor(touchgfx::Color::getColorFromRGB(0, 255, 198));// gán vị trị ramdom cũ về màu xanh
+	    boxij[vtX0][vtY0]->invalidate();
+		for(int y = 0; y < 4; y++) startX_RightMoveHinh(y);
+	}
+	else // 2 trường hợp, 1 là ko có animation, 2 là còn 1 ô cuối => cx ko có animation
+	{
+		batXuLyLuoi = 1;
+		//dichuyenGa = true;
+	}
 }
 void playScreenView::moveLeft()
 {
@@ -235,23 +252,38 @@ void playScreenView::moveLeft()
 					if(gan[index][y] == 0)
 					{
 						gan[index][y] = grid[x][y];
+						setDiChuyen(x,y,index,y);
 					}
 					else
 					{
 						if(gan[index][y] == grid[x][y])
 						{
 							gan[index][y] = grid[x][y]*2;
+							setDiChuyen(x,y,index,y);
 							index++;
 						}
 						else
 						{
 							index++;
 							gan[index][y] = grid[x][y];
+							setDiChuyen(x,y,index,y);
 						}
 					}
 				}
 			}
 			for(int i = 0; i<4; i++) grid[i][y] = gan[i][y];
+
+		}
+		if(countToa != 0)
+		{
+		    boxij[vtX0][vtY0]->setColor(touchgfx::Color::getColorFromRGB(0, 255, 198));// gán vị trị ramdom cũ về màu xanh
+		    boxij[vtX0][vtY0]->invalidate();
+			for(int y = 0; y < 4; y++) startX_LeftMoveHinh(y);
+		}
+		else
+		{
+			batXuLyLuoi = 1;
+			//dichuyenGa = true;
 		}
 }
 void playScreenView::moveUp()
@@ -269,25 +301,39 @@ void playScreenView::moveUp()
 					if(gan[x][index] == 0)
 					{
 						gan[x][index] = grid[x][y];
+						setDiChuyen(x,y,x,index);
 					}
 					else
 					{
 						if(gan[x][index] == grid[x][y])
 						{
 							gan[x][index] = grid[x][y]*2;
+							setDiChuyen(x,y,x,index);
 							index++;
 						}
 						else
 						{
 							index++;
 							gan[x][index] = grid[x][y];
+							setDiChuyen(x,y,x,index);
 						}
 					}
 				}
 			}
 			for(int i = 0; i<4 ; i++) grid[x][i] = gan[x][i];
-		}
 
+		}
+		if(countToa != 0)
+		{
+		    boxij[vtX0][vtY0]->setColor(touchgfx::Color::getColorFromRGB(0, 255, 198));// gán vị trị ramdom cũ về màu xanh
+		    boxij[vtX0][vtY0]->invalidate();
+			for(int x = 0; x < 4; x++) startY_UpMoveHinh(x);
+		}
+		else
+		{
+			batXuLyLuoi = 1;
+			//dichuyenGa = true;
+		}
 }
 void playScreenView::moveDown()
 {
@@ -304,23 +350,38 @@ void playScreenView::moveDown()
 						if(gan[x][index] == 0)
 						{
 							gan[x][index] = grid[x][y];
+							setDiChuyen(x,y,x,index);
 						}
 						else
 						{
 							if(gan[x][index] == grid[x][y])
 							{
 								gan[x][index] = grid[x][y]*2;
+								setDiChuyen(x,y,x,index);
 								index--;
 							}
 							else
 							{
 								index--;
 								gan[x][index] = grid[x][y];
+								setDiChuyen(x,y,x,index);
 							}
 						}
 					}
 				}
 				for(int i = 0; i<4 ; i++)	grid[x][i] = gan[x][i];
+
+			}
+			if(countToa != 0)
+			{
+			    boxij[vtX0][vtY0]->setColor(touchgfx::Color::getColorFromRGB(0, 255, 198));// gán vị trị ramdom cũ về màu xanh
+			    boxij[vtX0][vtY0]->invalidate();
+				for(int x = 0; x < 4; x++) startY_DownMoveHinh(x);
+			}
+			else
+			{
+				batXuLyLuoi = 1;
+				//dichuyenGa = true;
 			}
 }
 
@@ -329,7 +390,6 @@ void playScreenView::addRamdomBox()
 {
 	// Mảng lưu các vị trí có giá trị 0
 	    int viTri0[16][2];
-	    //for(int i=0;i<16;i++) {viTri0[i][0] = 0; viTri0[i][1] = 0;}
 	    int zeroCount = 0;
 
 	    // Tìm các ô có giá trị bằng 0
@@ -354,8 +414,8 @@ void playScreenView::addRamdomBox()
 	    }
 
 	    // Lấy 1 vị trí ngẫu nhiên từ danh sách ô trống(sinh số ngẫu nhiên)
-	    static mt19937 gen(xTaskGetTickCount()); // xTaskGetTickCount : thời gian chạy của hệ thống
-	    uniform_int_distribution<> dis(0, zeroCount - 1);
+	    static mt19937 gen(xTaskGetTickCount()); // xTaskGetTickCount : thời gian chạy của hệ thống => hàm trả về 1 số ngẫu nhiên
+	    uniform_int_distribution<> dis(0, zeroCount - 1); // tạo phân phối [0,zeroCount)
 
 	    int randomIndex = dis(gen);
 	    int randX = viTri0[randomIndex][0];
@@ -370,38 +430,48 @@ void playScreenView::addRamdomBox()
 	    boxij[randX][randY]->setColor(touchgfx::Color::getColorFromRGB(255, 245, 157));// vàng
 	    boxij[randX][randY]->invalidate();
 
+		Unicode::snprintf(textBufferij[randX][randY], 10 , "%u", 2);
+		textAreaij[randX][randY]->invalidate();
+
 	    // Nếu còn 1 ô cuối cùng thì xem xét còn đi được khôn
 	    if (zeroCount == 1)
 	    {
-	    	uint8_t set=0;
-	    	while(set == 0)
-	    	{
-	    		if(randX+1<4)// phải
-	    		{
-	    			if(grid[randX+1][randY] == 2) {set ++; break;}
-	    		}
-
-	    		if(randX-1>-1)// trái
-	    		{
-	    			if(grid[randX-1][randY] == 2) {set ++; break;}
-	    		}
-
-	    		if(randY+1<4)// duoi
-	    		{
-	    			if(grid[randX][randY+1] == 2) {set ++; break;}
-	    		}
-
-	    		if(randY-1>-1)// trái
-	    		{
-	    			if(grid[randX][randY-1] == 2) {set ++; break;}
-	    		}
-
-	    	}
-	    	if(set == 0) // tức là không thể đi được nữa
+	    	if(kiemtra() == 0) // tức là không thể đi được nữa
 	    	{
 	    		batXuLyLuoi = 2;
+	    		return;
 	    	}
 	    }
+	    batXuLyLuoi = 1;
+}
+
+// 4.1 kiểm tra còn đi tiếp đi được
+uint8_t playScreenView::kiemtra()
+{
+	for(int i = 0; i < 4; i++) // x
+	{
+		for(int j = 0; j < 4; j++) // y
+		{
+			// tại vị trí i,j kiểm tra xem còn đi được nx ko
+			if(i - 1 >= 0)
+			{
+				if(grid[i - 1][j] == grid[i][j]) return 1; // còn đi được
+			}
+			if(i + 1 < 4)
+			{
+				if(grid[i + 1][j] == grid[i][j]) return 1;
+			}
+			if(j - 1 >= 0)
+			{
+				if(grid[i][j - 1] == grid[i][j]) return 1;
+			}
+			if(j + 1 < 4)
+			{
+				if(grid[i][j + 1] == grid[i][j]) return 1;
+			}
+		}
+	}
+	return 0; // ko đi được
 }
 
 // 5: update giao diện
@@ -422,7 +492,7 @@ void playScreenView::updateGiaoDien()
 				}
 				else
 				{
-					if(i == vtX0 && j == vtY0) // vị trí hiện tại mói ramdom
+					if(i == vtX0 && j == vtY0) // vị trí hiện tại mới ramdom
 					{
 						Unicode::snprintf(textBufferij[i][j], 10 , "%u", grid[i][j]);
 						textAreaij[i][j]->invalidate();
@@ -463,48 +533,78 @@ void playScreenView::updateHighestScore() // gọi tới presenter
 }
 
 
-
-/*
 // 7: animation
-//7.1 thêm vào hàng đợi chuỗi di chuyển
-void playScreenView::addMoveHinh(int x1,int y1, int x2,int y2)
+//7.0 thêm vào hàng đợi chuỗi di chuyển
+void playScreenView::setDiChuyen(int x1,int y1, int x2,int y2)
 {
+	if(x1 == x2 && y1 == y2) return;// ko có sự đi chuyển
+
+	yesAnimation = true;
+	countToa++; // tăng số Animation
 	Toa[x1][y1] = (dichuyen){x1,y1,x2,y2}; // theo logic thì x1,y1 ở đầu là bé nhất
 }
 
+// 7.1
+// 7.1.1 merge box
+void playScreenView::mergeBox(int x2, int y2)
+{
+	// 1 đổi màu box x2,y2
+	boxij[x2][y2]->setColor(touchgfx::Color::getColorFromRGB(0, 255, 198));// màu xanh
+	boxij[x2][y2]->invalidate();
+
+	// 2 set giá trị
+	Unicode::snprintf(textBufferij[x2][y2], 10 , "%u", grid[x2][y2]);
+	textAreaij[x2][y2]->invalidate();
+}
+// 7.1.2 Animation về chỗ cũ
+void playScreenView::setContainerVeChoCu(int i, int j)
+{
+	containerij[i][j]->setXY(i*60, j*60);// set về chỗ chữ
+	boxij[i][j]->setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));// màu trắng
+	Unicode::strncpy(textBufferij[i][j], "", TEXTAREA11_SIZE); // in ra rỗng
+
+	textAreaij[i][j]->invalidate();
+	boxij[i][j]->invalidate();
+	containerij[i][j]->invalidate();
+
+	countToa--; // giảm số Animation hiện tại
+}
+// 7.1.3 finishAnimation
+void playScreenView::finishAnimation()
+{
+	if(countToa == 0)// ko còn animation
+	{
+		addRamdomBox();
+	}
+}
 
 // 7.2 kích hoạt quá trình di chuyển theo chiều ...
 
 //7.2.1 Phải
-void playScreenView::startX_RightMoveHinh(int i) // đi theo chiều ngang tại hang thứ i (y==i)
+void playScreenView::startX_RightMoveHinh(int y) // đi theo chiều ngang tại hàng thứ y
 {
-	for(int x = 3; x > -1; x--)
+
+	for(int x = 3; x > -1 ; x--) // gặp box đầu tiên thì chạy
 	{
-		if(Toa[x][i].X1 != -1) // đang gọi : i = x1; y = y1;
+		if(Toa[x][y].X1 != -1) // có Animation
 		{
+			int x2 = Toa[x][y].X2;
+			int y2 = Toa[x][y].Y2;
+
 			// 1: move to front
-			int x2 = Toa[x][i].X2;
-			int y2 = Toa[x][i].Y2;
-			Toa[x][i].X1 = -1; // đánh dấu là đã đi rồi
-			container1.remove(*containerij[x][i]); // kỹ thuật để làm cho containerij có order cao
-			container1.add(*containerij[x][i]);
+			container1.remove(*containerij[x][y]); // kỹ thuật để làm cho containerij có order cao
+			container1.add(*containerij[x][y]);
 
 			// 2 xóa bóng
-			containerij[x][i]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
+			containerij[x][y]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
 
 			// 3 bật nghe animation và khởi tạo animation
-			containerij[x][i]->setMoveAnimationEndedAction(conTroCallBackX_Right);
-			containerij[x][i]->startMoveAnimation(x2*60, y2*60, 10, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-
+			containerij[x][y]->setMoveAnimationEndedAction(conTroCallBackX_Right);
+			containerij[x][y]->startMoveAnimation(x2*60, y2*60, timeAnimation, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
 			return;
 		}
 	}
-	if(i == 3) // duyệt hết
-	{
-		addRamdomBox();
-		batXuLyLuoi = 1; // bật lại sau khi Animation thực hiện xong
-	}
-
+	finishAnimation();
 }
 void playScreenView::callbackHandlerX_Right(const touchgfx::MoveAnimator<touchgfx::Container>& cont)
 {
@@ -513,28 +613,12 @@ void playScreenView::callbackHandlerX_Right(const touchgfx::MoveAnimator<touchgf
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(containerij[i][j] == &cont)// tìm ra tọa độ i,j <=> container đang gọi callback
+			if(containerij[i][j] == &cont)// tìm ra tọa độ i, j cái mà container đang gọi callback
 			{
-				int x2 = Toa[i][j].X2;
-				int y2 = Toa[i][j].Y2;
+				mergeBox(Toa[i][j].X2, Toa[i][j].Y2); // merge ô
+				setContainerVeChoCu(i, j);            // cho box đang animation về chỗ cũ
 
-				// bắt đầu
-				// 1 đổi màu box x2,y2
-				boxij[x2][y2]->setColor(touchgfx::Color::getColorFromRGB(180, 255, 255));// màu xanh
-				boxij[x2][y2]->invalidate();
-
-				// 2 cho containerij cũ về chỗ và xong
-				containerij[i][j]->setXY(i*60, j*60);
-
-				boxij[i][j]->setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));// màu trắng
-				boxij[i][j]->invalidate();
-
-				uint32_t r=0;
-				Unicode::snprintf(textBufferij[i][j], 10 , "%u", r);
-				textAreaij[i][j]->invalidate();
-
-				containerij[i][j]->invalidate();
-
+				Toa[i][j].X1 = -1;// đánh dấu là đi đc animation rồi
 				startX_RightMoveHinh(j);
 				return;
 			}
@@ -543,34 +627,29 @@ void playScreenView::callbackHandlerX_Right(const touchgfx::MoveAnimator<touchgf
 }
 
 //7.2.1 Trái
-void playScreenView::startX_LeftMoveHinh(int i) // đi theo chiều ngang tại hang thứ i (y==i)
+void playScreenView::startX_LeftMoveHinh(int y) // đi theo chiều ngang tại hang thứ i (y==i)
 {
-	for(int x = 0; x < 4; x++)
+	for(int x = 0; x < 4 ; x++) // gặp box đầu tiên thì chạy
 	{
-		if(Toa[x][i].X1 != -1) // đang gọi : i = x1; y = y1;
+		if(Toa[x][y].X1 != -1) // có Animation
 		{
+			int x2 = Toa[x][y].X2;
+			int y2 = Toa[x][y].Y2;
+
 			// 1: move to front
-			int x2 = Toa[x][i].X2;
-			int y2 = Toa[x][i].Y2;
-			Toa[x][i].X1 = -1; // đánh dấu là đã đi rồi
-			container1.remove(*containerij[x][i]); // kỹ thuật để làm cho containerij có order cao
-			container1.add(*containerij[x][i]);
+			container1.remove(*containerij[x][y]); // kỹ thuật để làm cho containerij có order cao
+			container1.add(*containerij[x][y]);
 
 			// 2 xóa bóng
-			containerij[x][i]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
+			containerij[x][y]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
 
 			// 3 bật nghe animation và khởi tạo animation
-			containerij[x][i]->setMoveAnimationEndedAction(conTroCallBackX_Left);
-			containerij[x][i]->startMoveAnimation(x2*60, y2*60, 10, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-
+			containerij[x][y]->setMoveAnimationEndedAction(conTroCallBackX_Left);
+			containerij[x][y]->startMoveAnimation(x2*60, y2*60, timeAnimation, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
 			return;
 		}
 	}
-	if(i == 3) // duyệt hết
-	{
-		addRamdomBox();
-		batXuLyLuoi = 1; // bật lại sau khi Animation thực hiện xong
-	}
+	finishAnimation();
 }
 void playScreenView::callbackHandlerX_Left(const touchgfx::MoveAnimator<touchgfx::Container>& cont)
 {
@@ -579,28 +658,12 @@ void playScreenView::callbackHandlerX_Left(const touchgfx::MoveAnimator<touchgfx
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(containerij[i][j] == &cont)// tìm ra tọa độ i,j <=> container đang gọi callback
+			if(containerij[i][j] == &cont)// tìm ra tọa độ i, j cái mà container đang gọi callback
 			{
-				int x2 = Toa[i][j].X2;
-				int y2 = Toa[i][j].Y2;
+				mergeBox(Toa[i][j].X2, Toa[i][j].Y2); // merge ô
+				setContainerVeChoCu(i, j);            // cho box đang animation về chỗ cũ
 
-				// bắt đầu
-				// 1 đổi màu box x2,y2
-				boxij[x2][y2]->setColor(touchgfx::Color::getColorFromRGB(180, 255, 255));// màu xanh
-				boxij[x2][y2]->invalidate();
-
-				// 2 cho containerij cũ về chỗ và xong
-				containerij[i][j]->setXY(i*60, j*60);
-
-				boxij[i][j]->setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));// màu trắng
-				boxij[i][j]->invalidate();
-
-				uint32_t r=0;
-				Unicode::snprintf(textBufferij[i][j], 10 , "%u", r);
-				textAreaij[i][j]->invalidate();
-
-				containerij[i][j]->invalidate();
-
+				Toa[i][j].X1 = -1;// đánh dấu là đi đc animation rồi
 				startX_LeftMoveHinh(j);
 				return;
 			}
@@ -610,65 +673,42 @@ void playScreenView::callbackHandlerX_Left(const touchgfx::MoveAnimator<touchgfx
 
 
 //7.2.1 Lên
-void playScreenView::startY_UpMoveHinh(int i) // đi theo chiều dọc tại cột thứ i
+void playScreenView::startY_UpMoveHinh(int x) // đi theo chiều dọc tại cột thứ i
 {
-	for(int y = 0; y < 4; y++)
+	for(int y = 0; y < 4 ; y++) // gặp box đầu tiên thì chạy
 	{
-		if(Toa[i][y].X1 != -1) // đang gọi : i = x1; y = y1;
+		if(Toa[x][y].X1 != -1) // có Animation
 		{
-			int x2 = Toa[i][y].X2;
-			int y2 = Toa[i][y].Y2;
-			Toa[i][y].X1 = -1; // đánh dấu là đã đi rồi
-			// tiền di chuyển
+			int x2 = Toa[x][y].X2;
+			int y2 = Toa[x][y].Y2;
+
 			// 1: move to front
-			container1.remove(*containerij[i][y]); // kỹ thuật để làm cho containerij có order cao
-			container1.add(*containerij[i][y]);
+			container1.remove(*containerij[x][y]); // kỹ thuật để làm cho containerij có order cao
+			container1.add(*containerij[x][y]);
 
 			// 2 xóa bóng
-			containerij[i][y]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
+			containerij[x][y]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
 
 			// 3 bật nghe animation và khởi tạo animation
-			containerij[i][y]->setMoveAnimationEndedAction(conTroCallBackY_Up);
-			containerij[i][y]->startMoveAnimation(x2*60, y2*60, 10, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-
+			containerij[x][y]->setMoveAnimationEndedAction(conTroCallBackY_Up);
+			containerij[x][y]->startMoveAnimation(x2*60, y2*60, timeAnimation, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
 			return;
 		}
 	}
-	if(i == 3) // duyệt hết
-	{
-		addRamdomBox();
-		batXuLyLuoi = 1; // bật lại sau khi Animation thực hiện xong
-	}
+	finishAnimation();
 }
 void playScreenView::callbackHandlerY_Up(const touchgfx::MoveAnimator<touchgfx::Container>& cont)
 {
-	// tìm container đang gọi
 	for(int i = 0; i < 4 ; i++)
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(containerij[i][j] == &cont)// tìm ra tọa độ i,j <=> container đang gọi callback
+			if(containerij[i][j] == &cont)// tìm ra tọa độ i, j cái mà container đang gọi callback
 			{
-				int x2 = Toa[i][j].X2;
-				int y2 = Toa[i][j].Y2;
+				mergeBox(Toa[i][j].X2, Toa[i][j].Y2); // merge ô
+				setContainerVeChoCu(i, j);            // cho box đang animation về chỗ cũ
 
-				// bắt đầu
-				// 1 đổi màu box x2,y2
-				boxij[x2][y2]->setColor(touchgfx::Color::getColorFromRGB(180, 255, 255));// màu xanh
-				boxij[x2][y2]->invalidate();
-
-				// 2 cho containerij cũ về chỗ và xong
-				containerij[i][j]->setXY(i*60, j*60);
-
-				boxij[i][j]->setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));// màu trắng
-				boxij[i][j]->invalidate();
-
-				uint32_t r=0;
-				Unicode::snprintf(textBufferij[i][j], 10 , "%u", r);
-				textAreaij[i][j]->invalidate();
-
-				containerij[i][j]->invalidate();
-
+				Toa[i][j].X1 = -1;// đánh dấu là đi đc animation rồi
 				startY_UpMoveHinh(i);
 				return;
 			}
@@ -678,72 +718,48 @@ void playScreenView::callbackHandlerY_Up(const touchgfx::MoveAnimator<touchgfx::
 
 
 //7.2.1 Xuống
-void playScreenView::startY_DownMoveHinh(int i) // đi theo chiều dọc tại cột thứ i
+void playScreenView::startY_DownMoveHinh(int x) // đi theo chiều dọc tại cột thứ i
 {
-	for(int y = 3; y > -1; y--)
+	for(int y = 3; y > -1 ; y--) // gặp box đầu tiên thì chạy
 	{
-		if(Toa[i][y].X1 != -1) // đang gọi : i = x1; y = y1;
+		if(Toa[x][y].X1 != -1) // có Animation
 		{
-			int x2 = Toa[i][y].X2;
-			int y2 = Toa[i][y].Y2;
-			Toa[i][y].X1 = -1; // đánh dấu là đã đi rồi
-			// tiền di chuyển
+			int x2 = Toa[x][y].X2;
+			int y2 = Toa[x][y].Y2;
+
 			// 1: move to front
-			container1.remove(*containerij[i][y]); // kỹ thuật để làm cho containerij có order cao
-			container1.add(*containerij[i][y]);
+			container1.remove(*containerij[x][y]); // kỹ thuật để làm cho containerij có order cao
+			container1.add(*containerij[x][y]);
 
 			// 2 xóa bóng
-			containerij[i][y]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
+			containerij[x][y]->clearMoveAnimationEndedAction(); // xóa vị trí ban đầu
 
 			// 3 bật nghe animation và khởi tạo animation
-			containerij[i][y]->setMoveAnimationEndedAction(conTroCallBackY_Up);
-			containerij[i][y]->startMoveAnimation(x2*60, y2*60, 10, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
-
+			containerij[x][y]->setMoveAnimationEndedAction(conTroCallBackY_Down);
+			containerij[x][y]->startMoveAnimation(x2*60, y2*60, timeAnimation, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
 			return;
 		}
 	}
-	if(i == 3)  // duyệt hết
-	{
-		addRamdomBox();
-		batXuLyLuoi = 1; // bật lại sau khi Animation thực hiện xong
-	}
+	finishAnimation();
 }
 void playScreenView::callbackHandlerY_Down(const touchgfx::MoveAnimator<touchgfx::Container>& cont)
 {
-	// tìm container đang gọi
 	for(int i = 0; i < 4 ; i++)
 	{
 		for(int j = 0; j < 4; j++)
 		{
-			if(containerij[i][j] == &cont)// tìm ra tọa độ i,j <=> container đang gọi callback
+			if(containerij[i][j] == &cont)// tìm ra tọa độ i, j cái mà container đang gọi callback
 			{
-				int x2 = Toa[i][j].X2;
-				int y2 = Toa[i][j].Y2;
+				mergeBox(Toa[i][j].X2, Toa[i][j].Y2); // merge ô
+				setContainerVeChoCu(i, j);            // cho box đang animation về chỗ cũ
 
-				// bắt đầu
-				// 1 đổi màu box x2,y2
-				boxij[x2][y2]->setColor(touchgfx::Color::getColorFromRGB(180, 255, 255));// màu xanh
-				boxij[x2][y2]->invalidate();
-
-				// 2 cho containerij cũ về chỗ và xong
-				containerij[i][j]->setXY(i*60, j*60);
-
-				boxij[i][j]->setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));// màu trắng
-				boxij[i][j]->invalidate();
-
-				uint32_t r=0;
-				Unicode::snprintf(textBufferij[i][j], 10 , "%u", r);
-				textAreaij[i][j]->invalidate();
-
-				containerij[i][j]->invalidate();
-
+				Toa[i][j].X1 = -1;// đánh dấu là đi đc animation rồi
 				startY_DownMoveHinh(i);
 				return;
 			}
 		}
 	}
 }
-*/
 
 
 
