@@ -219,7 +219,11 @@ void playScreenView::moveRight()
 			}
 		}
 		// gán kết quả
-		for(int i = 0; i<4; i++)	grid[i][y] = gan[i][y];
+		for(int i = 0; i<4; i++)
+		{
+			grid[i][y] = gan[i][y];
+			score = max(score, grid[i][y]);
+		}
 	}
 
 
@@ -258,7 +262,11 @@ void playScreenView::moveLeft()
 					}
 				}
 			}
-			for(int i = 0; i<4; i++) grid[i][y] = gan[i][y];
+			for(int i = 0; i<4; i++)
+			{
+				grid[i][y] = gan[i][y];
+				score = max(score, grid[i][y]);
+			}
 		}
 }
 void playScreenView::moveUp()
@@ -295,7 +303,11 @@ void playScreenView::moveUp()
 					}
 				}
 			}
-			for(int i = 0; i<4 ; i++) grid[x][i] = gan[x][i];
+			for(int i = 0; i<4 ; i++)
+			{
+				grid[x][i] = gan[x][i];
+				score = max(score, grid[x][i]);
+			}
 		}
 
 }
@@ -333,7 +345,11 @@ void playScreenView::moveDown()
 						}
 					}
 				}
-				for(int i = 0; i<4 ; i++)	grid[x][i] = gan[x][i];
+				for(int i = 0; i<4 ; i++)
+				{
+					grid[x][i] = gan[x][i];
+					score = max(score, grid[x][i]);
+				}
 			}
 }
 
@@ -383,8 +399,15 @@ void playScreenView::addRamdomBox()
 	    vtX0 = randX; // giữ giá trị này
 	    vtY0 = randY;
 
-	    // Gán giá trị 2 vào vị trí vừa chọn
-	    grid[randX][randY] = 2; // tạo màu vàng riêng biệt để nhận ra
+	    // Gán giá trị 2 or 4 vào vị trí vừa chọn
+	    if(score < DIEM_NGUONG) grid[randX][randY] = 2;
+	    else
+	    {
+	    	uniform_int_distribution<> RandomValue(0,3);
+	    	int randomValue = RandomValue(gen);
+	    	if(randomValue % 2 == 0) grid[randX][randY] = 2;// tổng là chẵn
+	    	else grid[randX][randY] = 4;
+	    }
 
 	    // Nếu còn 1 ô cuối cùng thì xem xét còn đi được khôn
 	    if (zeroCount == 1)

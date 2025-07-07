@@ -20,7 +20,8 @@ protected:
     // thêm các hàm và biến
     uint32_t grid[4][4];// dữ liệu các box
     uint32_t gan[4][4];// dữ liệu để tương tác với grid
-    uint32_t score = 0; // điểm hiện tại
+    uint32_t score = 0; // điểm max hiện tại
+    uint32_t DIEM_NGUONG = 64;
     uint8_t newSta = 0; //
     uint8_t oldSta = 0;
     uint8_t batXuLyLuoi=0; // 0 thì là chưa làm gì, 1 là đang chơi, 2 là kết thúc
@@ -52,8 +53,6 @@ protected:
 
     // tạo callback cho animation
     int countToa = 0; // số animation hiện tại
-
-
 
 };
 
